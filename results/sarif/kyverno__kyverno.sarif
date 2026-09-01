@@ -1,0 +1,515 @@
+{
+ "$schema": "https://json.schemastore.org/sarif-2.1.0.json",
+ "version": "2.1.0",
+ "runs": [
+  {
+   "tool": {
+    "driver": {
+     "name": "actpin",
+     "version": "0.1.0",
+     "informationUri": "https://github.com/",
+     "rules": [
+      {
+       "id": "APN001",
+       "name": "unpinned-direct",
+       "shortDescription": {
+        "text": "Action reference in this repository is not pinned to a full commit SHA"
+       },
+       "defaultConfiguration": {
+        "level": "error"
+       }
+      },
+      {
+       "id": "APN002",
+       "name": "unpinned-transitive",
+       "shortDescription": {
+        "text": "A pinned action or reusable workflow pulls in an unpinned action"
+       },
+       "defaultConfiguration": {
+        "level": "error"
+       }
+      },
+      {
+       "id": "APN003",
+       "name": "impostor-commit",
+       "shortDescription": {
+        "text": "Pinned SHA is not reachable from any branch or tag of the upstream repository"
+       },
+       "defaultConfiguration": {
+        "level": "error"
+       }
+      },
+      {
+       "id": "APN004",
+       "name": "tag-moved",
+       "shortDescription": {
+        "text": "A referenced tag now points at a different commit"
+       },
+       "defaultConfiguration": {
+        "level": "warning"
+       }
+      }
+     ]
+    }
+   },
+   "results": [
+    {
+     "ruleId": "APN001",
+     "level": "error",
+     "message": {
+      "text": "`slsa-framework/slsa-github-generator/.github/workflows/generator_container_slsa3.yml@v2.1.0` uses a mutable tag reference; pin it to a full SHA."
+     },
+     "locations": [
+      {
+       "physicalLocation": {
+        "artifactLocation": {
+         "uri": ".github/workflows/images-publish.yaml"
+        },
+        "region": {
+         "startLine": 175
+        }
+       }
+      }
+     ]
+    },
+    {
+     "ruleId": "APN001",
+     "level": "error",
+     "message": {
+      "text": "`slsa-framework/slsa-github-generator/.github/workflows/generator_container_slsa3.yml@v2.1.0` uses a mutable tag reference; pin it to a full SHA."
+     },
+     "locations": [
+      {
+       "physicalLocation": {
+        "artifactLocation": {
+         "uri": ".github/workflows/images-publish.yaml"
+        },
+        "region": {
+         "startLine": 190
+        }
+       }
+      }
+     ]
+    },
+    {
+     "ruleId": "APN001",
+     "level": "error",
+     "message": {
+      "text": "`slsa-framework/slsa-github-generator/.github/workflows/generator_container_slsa3.yml@v2.1.0` uses a mutable tag reference; pin it to a full SHA."
+     },
+     "locations": [
+      {
+       "physicalLocation": {
+        "artifactLocation": {
+         "uri": ".github/workflows/images-publish.yaml"
+        },
+        "region": {
+         "startLine": 205
+        }
+       }
+      }
+     ]
+    },
+    {
+     "ruleId": "APN001",
+     "level": "error",
+     "message": {
+      "text": "`slsa-framework/slsa-github-generator/.github/workflows/generator_container_slsa3.yml@v2.1.0` uses a mutable tag reference; pin it to a full SHA."
+     },
+     "locations": [
+      {
+       "physicalLocation": {
+        "artifactLocation": {
+         "uri": ".github/workflows/images-publish.yaml"
+        },
+        "region": {
+         "startLine": 220
+        }
+       }
+      }
+     ]
+    },
+    {
+     "ruleId": "APN001",
+     "level": "error",
+     "message": {
+      "text": "`slsa-framework/slsa-github-generator/.github/workflows/generator_container_slsa3.yml@v2.1.0` uses a mutable tag reference; pin it to a full SHA."
+     },
+     "locations": [
+      {
+       "physicalLocation": {
+        "artifactLocation": {
+         "uri": ".github/workflows/images-publish.yaml"
+        },
+        "region": {
+         "startLine": 235
+        }
+       }
+      }
+     ]
+    },
+    {
+     "ruleId": "APN001",
+     "level": "error",
+     "message": {
+      "text": "`slsa-framework/slsa-github-generator/.github/workflows/generator_container_slsa3.yml@v2.1.0` uses a mutable tag reference; pin it to a full SHA."
+     },
+     "locations": [
+      {
+       "physicalLocation": {
+        "artifactLocation": {
+         "uri": ".github/workflows/images-publish.yaml"
+        },
+        "region": {
+         "startLine": 250
+        }
+       }
+      }
+     ]
+    },
+    {
+     "ruleId": "APN001",
+     "level": "error",
+     "message": {
+      "text": "`slsa-framework/slsa-github-generator/.github/workflows/generator_container_slsa3.yml@v2.1.0` uses a mutable tag reference; pin it to a full SHA."
+     },
+     "locations": [
+      {
+       "physicalLocation": {
+        "artifactLocation": {
+         "uri": ".github/workflows/images-publish.yaml"
+        },
+        "region": {
+         "startLine": 265
+        }
+       }
+      }
+     ]
+    },
+    {
+     "ruleId": "APN001",
+     "level": "error",
+     "message": {
+      "text": "`slsa-framework/slsa-github-generator/.github/workflows/generator_container_slsa3.yml@v2.1.0` uses a mutable tag reference; pin it to a full SHA."
+     },
+     "locations": [
+      {
+       "physicalLocation": {
+        "artifactLocation": {
+         "uri": ".github/workflows/release.yaml"
+        },
+        "region": {
+         "startLine": 169
+        }
+       }
+      }
+     ]
+    },
+    {
+     "ruleId": "APN001",
+     "level": "error",
+     "message": {
+      "text": "`slsa-framework/slsa-github-generator/.github/workflows/generator_container_slsa3.yml@v2.1.0` uses a mutable tag reference; pin it to a full SHA."
+     },
+     "locations": [
+      {
+       "physicalLocation": {
+        "artifactLocation": {
+         "uri": ".github/workflows/release.yaml"
+        },
+        "region": {
+         "startLine": 184
+        }
+       }
+      }
+     ]
+    },
+    {
+     "ruleId": "APN001",
+     "level": "error",
+     "message": {
+      "text": "`slsa-framework/slsa-github-generator/.github/workflows/generator_container_slsa3.yml@v2.1.0` uses a mutable tag reference; pin it to a full SHA."
+     },
+     "locations": [
+      {
+       "physicalLocation": {
+        "artifactLocation": {
+         "uri": ".github/workflows/release.yaml"
+        },
+        "region": {
+         "startLine": 199
+        }
+       }
+      }
+     ]
+    },
+    {
+     "ruleId": "APN001",
+     "level": "error",
+     "message": {
+      "text": "`slsa-framework/slsa-github-generator/.github/workflows/generator_container_slsa3.yml@v2.1.0` uses a mutable tag reference; pin it to a full SHA."
+     },
+     "locations": [
+      {
+       "physicalLocation": {
+        "artifactLocation": {
+         "uri": ".github/workflows/release.yaml"
+        },
+        "region": {
+         "startLine": 214
+        }
+       }
+      }
+     ]
+    },
+    {
+     "ruleId": "APN001",
+     "level": "error",
+     "message": {
+      "text": "`slsa-framework/slsa-github-generator/.github/workflows/generator_container_slsa3.yml@v2.1.0` uses a mutable tag reference; pin it to a full SHA."
+     },
+     "locations": [
+      {
+       "physicalLocation": {
+        "artifactLocation": {
+         "uri": ".github/workflows/release.yaml"
+        },
+        "region": {
+         "startLine": 229
+        }
+       }
+      }
+     ]
+    },
+    {
+     "ruleId": "APN001",
+     "level": "error",
+     "message": {
+      "text": "`slsa-framework/slsa-github-generator/.github/workflows/generator_container_slsa3.yml@v2.1.0` uses a mutable tag reference; pin it to a full SHA."
+     },
+     "locations": [
+      {
+       "physicalLocation": {
+        "artifactLocation": {
+         "uri": ".github/workflows/release.yaml"
+        },
+        "region": {
+         "startLine": 244
+        }
+       }
+      }
+     ]
+    },
+    {
+     "ruleId": "APN001",
+     "level": "error",
+     "message": {
+      "text": "`slsa-framework/slsa-github-generator/.github/workflows/generator_container_slsa3.yml@v2.1.0` uses a mutable tag reference; pin it to a full SHA."
+     },
+     "locations": [
+      {
+       "physicalLocation": {
+        "artifactLocation": {
+         "uri": ".github/workflows/release.yaml"
+        },
+        "region": {
+         "startLine": 259
+        }
+       }
+      }
+     ]
+    },
+    {
+     "ruleId": "APN002",
+     "level": "error",
+     "message": {
+      "text": "`slsa-framework/slsa-github-generator/.github/actions/detect-workflow-js@v2.1.0` (tag) is pulled in transitively via .github/workflows/images-publish.yaml -> slsa-framework/slsa-github-generator/.github/workflows/generator_container_slsa3.yml@v2.1.0 -> slsa-framework/slsa-github-generator/.github/actions/detect-workflow-js@v2.1.0. Pinning the direct reference does not pin this action."
+     },
+     "locations": [
+      {
+       "physicalLocation": {
+        "artifactLocation": {
+         "uri": ".github/workflows/images-publish.yaml"
+        },
+        "region": {
+         "startLine": 175
+        }
+       }
+      }
+     ]
+    },
+    {
+     "ruleId": "APN002",
+     "level": "error",
+     "message": {
+      "text": "`slsa-framework/slsa-github-generator/.github/actions/generate-builder@v2.1.0` (tag) is pulled in transitively via .github/workflows/images-publish.yaml -> slsa-framework/slsa-github-generator/.github/workflows/generator_container_slsa3.yml@v2.1.0 -> slsa-framework/slsa-github-generator/.github/actions/generate-builder@v2.1.0. Pinning the direct reference does not pin this action."
+     },
+     "locations": [
+      {
+       "physicalLocation": {
+        "artifactLocation": {
+         "uri": ".github/workflows/images-publish.yaml"
+        },
+        "region": {
+         "startLine": 175
+        }
+       }
+      }
+     ]
+    },
+    {
+     "ruleId": "APN002",
+     "level": "error",
+     "message": {
+      "text": "`docker://ghcr.io/cbrgm/cleanup-stale-branches-action:v1` (docker-tag) is pulled in transitively via .github/workflows/periodic-cleanup.yaml -> cbrgm/cleanup-stale-branches-action@c932d1f1b7e7506224d8a5bd8dd5d123295f6682 -> docker://ghcr.io/cbrgm/cleanup-stale-branches-action:v1. Pinning the direct reference does not pin this action."
+     },
+     "locations": [
+      {
+       "physicalLocation": {
+        "artifactLocation": {
+         "uri": ".github/workflows/periodic-cleanup.yaml"
+        },
+        "region": {
+         "startLine": 18
+        }
+       }
+      }
+     ]
+    },
+    {
+     "ruleId": "APN002",
+     "level": "error",
+     "message": {
+      "text": "`actions/create-github-app-token@v3` (tag) is pulled in transitively via .github/workflows/pr-branch-updater.yml -> kyverno/.github/.github/workflows/pr-branch-updater.yml@36a967326e724e5e5fe6c93d7f45d6c1a3436301 -> actions/create-github-app-token@v3. Pinning the direct reference does not pin this action."
+     },
+     "locations": [
+      {
+       "physicalLocation": {
+        "artifactLocation": {
+         "uri": ".github/workflows/pr-branch-updater.yml"
+        },
+        "region": {
+         "startLine": 19
+        }
+       }
+      }
+     ]
+    },
+    {
+     "ruleId": "APN002",
+     "level": "error",
+     "message": {
+      "text": "`docker://ghcr.io/rajatjindal/krew-release-bot:v0.0.50` (docker-tag) is pulled in transitively via .github/workflows/release.yaml -> rajatjindal/krew-release-bot@c970b8a8f6dbc2f2285a26e3ae160903b87002c3 -> docker://ghcr.io/rajatjindal/krew-release-bot:v0.0.50. Pinning the direct reference does not pin this action."
+     },
+     "locations": [
+      {
+       "physicalLocation": {
+        "artifactLocation": {
+         "uri": ".github/workflows/release.yaml"
+        },
+        "region": {
+         "startLine": 410
+        }
+       }
+      }
+     ]
+    },
+    {
+     "ruleId": "APN002",
+     "level": "error",
+     "message": {
+      "text": "`docker://ghcr.io/ossf/scorecard-action:v2.4.4` (docker-tag) is pulled in transitively via .github/workflows/scan-scorecard.yaml -> ossf/scorecard-action@2d1146689b8cda280b9bc96326124645441f03bc -> docker://ghcr.io/ossf/scorecard-action:v2.4.4. Pinning the direct reference does not pin this action."
+     },
+     "locations": [
+      {
+       "physicalLocation": {
+        "artifactLocation": {
+         "uri": ".github/workflows/scan-scorecard.yaml"
+        },
+        "region": {
+         "startLine": 31
+        }
+       }
+      }
+     ]
+    },
+    {
+     "ruleId": "APN002",
+     "level": "error",
+     "message": {
+      "text": "`SonarSource/sonarqube-scan-action@v5.0.0` (tag) is pulled in transitively via .github/workflows/scan-sonarcloud.yaml -> sonarsource/sonarcloud-github-action@ffc3010689be73b8e5ae0c57ce35968afd7909e8 -> SonarSource/sonarqube-scan-action@v5.0.0. Pinning the direct reference does not pin this action."
+     },
+     "locations": [
+      {
+       "physicalLocation": {
+        "artifactLocation": {
+         "uri": ".github/workflows/scan-sonarcloud.yaml"
+        },
+        "region": {
+         "startLine": 29
+        }
+       }
+      }
+     ]
+    },
+    {
+     "ruleId": "APN002",
+     "level": "error",
+     "message": {
+      "text": "`slsa-framework/slsa-github-generator/.github/actions/secure-builder-checkout@v2.1.0` (tag) is pulled in transitively via .github/workflows/images-publish.yaml -> slsa-framework/slsa-github-generator/.github/workflows/generator_container_slsa3.yml@v2.1.0 -> slsa-framework/slsa-github-generator/.github/actions/generate-builder@v2.1.0 -> slsa-framework/slsa-github-generator/.github/actions/secure-builder-checkout@v2.1.0. Pinning the direct reference does not pin this action."
+     },
+     "locations": [
+      {
+       "physicalLocation": {
+        "artifactLocation": {
+         "uri": ".github/workflows/images-publish.yaml"
+        },
+        "region": {
+         "startLine": 175
+        }
+       }
+      }
+     ]
+    },
+    {
+     "ruleId": "APN002",
+     "level": "error",
+     "message": {
+      "text": "`docker://mikefarah/yq:4-githubaction` (docker-tag) is pulled in transitively via .github/workflows/pr-labelling.yaml -> ./.github/actions/tools/yq -> mikefarah/yq@5a7e72a743649b1b3a47d1a1d8214f3453173c51 -> docker://mikefarah/yq:4-githubaction. Pinning the direct reference does not pin this action."
+     },
+     "locations": [
+      {
+       "physicalLocation": {
+        "artifactLocation": {
+         "uri": ".github/workflows/pr-labelling.yaml"
+        },
+        "region": {
+         "startLine": 27
+        }
+       }
+      }
+     ]
+    },
+    {
+     "ruleId": "APN002",
+     "level": "error",
+     "message": {
+      "text": "`actions/cache@v4` (tag) is pulled in transitively via .github/workflows/scan-sonarcloud.yaml -> sonarsource/sonarcloud-github-action@ffc3010689be73b8e5ae0c57ce35968afd7909e8 -> SonarSource/sonarqube-scan-action@v5.0.0 -> actions/cache@v4. Pinning the direct reference does not pin this action."
+     },
+     "locations": [
+      {
+       "physicalLocation": {
+        "artifactLocation": {
+         "uri": ".github/workflows/scan-sonarcloud.yaml"
+        },
+        "region": {
+         "startLine": 29
+        }
+       }
+      }
+     ]
+    }
+   ]
+  }
+ ]
+}

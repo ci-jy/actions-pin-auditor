@@ -1,0 +1,230 @@
+{
+ "$schema": "https://json.schemastore.org/sarif-2.1.0.json",
+ "version": "2.1.0",
+ "runs": [
+  {
+   "tool": {
+    "driver": {
+     "name": "actpin",
+     "version": "0.1.0",
+     "informationUri": "https://github.com/",
+     "rules": [
+      {
+       "id": "APN001",
+       "name": "unpinned-direct",
+       "shortDescription": {
+        "text": "Action reference in this repository is not pinned to a full commit SHA"
+       },
+       "defaultConfiguration": {
+        "level": "error"
+       }
+      },
+      {
+       "id": "APN002",
+       "name": "unpinned-transitive",
+       "shortDescription": {
+        "text": "A pinned action or reusable workflow pulls in an unpinned action"
+       },
+       "defaultConfiguration": {
+        "level": "error"
+       }
+      },
+      {
+       "id": "APN003",
+       "name": "impostor-commit",
+       "shortDescription": {
+        "text": "Pinned SHA is not reachable from any branch or tag of the upstream repository"
+       },
+       "defaultConfiguration": {
+        "level": "error"
+       }
+      },
+      {
+       "id": "APN004",
+       "name": "tag-moved",
+       "shortDescription": {
+        "text": "A referenced tag now points at a different commit"
+       },
+       "defaultConfiguration": {
+        "level": "warning"
+       }
+      }
+     ]
+    }
+   },
+   "results": [
+    {
+     "ruleId": "APN001",
+     "level": "error",
+     "message": {
+      "text": "`slsa-framework/slsa-github-generator/.github/workflows/generator_generic_slsa3.yml@v2.1.0` uses a mutable tag reference; pin it to a full SHA."
+     },
+     "locations": [
+      {
+       "physicalLocation": {
+        "artifactLocation": {
+         "uri": ".github/workflows/goreleaser.yaml"
+        },
+        "region": {
+         "startLine": 77
+        }
+       }
+      }
+     ]
+    },
+    {
+     "ruleId": "APN002",
+     "level": "error",
+     "message": {
+      "text": "`slsa-framework/slsa-github-generator/.github/actions/detect-workflow-js@v2.1.0` (tag) is pulled in transitively via .github/workflows/goreleaser.yaml -> slsa-framework/slsa-github-generator/.github/workflows/generator_generic_slsa3.yml@v2.1.0 -> slsa-framework/slsa-github-generator/.github/actions/detect-workflow-js@v2.1.0. Pinning the direct reference does not pin this action."
+     },
+     "locations": [
+      {
+       "physicalLocation": {
+        "artifactLocation": {
+         "uri": ".github/workflows/goreleaser.yaml"
+        },
+        "region": {
+         "startLine": 77
+        }
+       }
+      }
+     ]
+    },
+    {
+     "ruleId": "APN002",
+     "level": "error",
+     "message": {
+      "text": "`slsa-framework/slsa-github-generator/.github/actions/generate-builder@v2.1.0` (tag) is pulled in transitively via .github/workflows/goreleaser.yaml -> slsa-framework/slsa-github-generator/.github/workflows/generator_generic_slsa3.yml@v2.1.0 -> slsa-framework/slsa-github-generator/.github/actions/generate-builder@v2.1.0. Pinning the direct reference does not pin this action."
+     },
+     "locations": [
+      {
+       "physicalLocation": {
+        "artifactLocation": {
+         "uri": ".github/workflows/goreleaser.yaml"
+        },
+        "region": {
+         "startLine": 77
+        }
+       }
+      }
+     ]
+    },
+    {
+     "ruleId": "APN002",
+     "level": "error",
+     "message": {
+      "text": "`slsa-framework/slsa-github-generator/.github/actions/secure-download-artifact@v2.1.0` (tag) is pulled in transitively via .github/workflows/goreleaser.yaml -> slsa-framework/slsa-github-generator/.github/workflows/generator_generic_slsa3.yml@v2.1.0 -> slsa-framework/slsa-github-generator/.github/actions/secure-download-artifact@v2.1.0. Pinning the direct reference does not pin this action."
+     },
+     "locations": [
+      {
+       "physicalLocation": {
+        "artifactLocation": {
+         "uri": ".github/workflows/goreleaser.yaml"
+        },
+        "region": {
+         "startLine": 77
+        }
+       }
+      }
+     ]
+    },
+    {
+     "ruleId": "APN002",
+     "level": "error",
+     "message": {
+      "text": "`slsa-framework/slsa-github-generator/.github/actions/secure-builder-checkout@v2.1.0` (tag) is pulled in transitively via .github/workflows/goreleaser.yaml -> slsa-framework/slsa-github-generator/.github/workflows/generator_generic_slsa3.yml@v2.1.0 -> slsa-framework/slsa-github-generator/.github/actions/secure-builder-checkout@v2.1.0. Pinning the direct reference does not pin this action."
+     },
+     "locations": [
+      {
+       "physicalLocation": {
+        "artifactLocation": {
+         "uri": ".github/workflows/goreleaser.yaml"
+        },
+        "region": {
+         "startLine": 77
+        }
+       }
+      }
+     ]
+    },
+    {
+     "ruleId": "APN002",
+     "level": "error",
+     "message": {
+      "text": "`docker://ghcr.io/ossf/scorecard-action:v2.4.4` (docker-tag) is pulled in transitively via .github/workflows/scorecard-analysis.yml -> ossf/scorecard-action@2d1146689b8cda280b9bc96326124645441f03bc -> docker://ghcr.io/ossf/scorecard-action:v2.4.4. Pinning the direct reference does not pin this action."
+     },
+     "locations": [
+      {
+       "physicalLocation": {
+        "artifactLocation": {
+         "uri": ".github/workflows/scorecard-analysis.yml"
+        },
+        "region": {
+         "startLine": 30
+        }
+       }
+      }
+     ]
+    },
+    {
+     "ruleId": "APN002",
+     "level": "error",
+     "message": {
+      "text": "`cue-lang/setup-cue@v1.0.1` (tag) is pulled in transitively via .github/workflows/security-insights.yml -> revanite-io/security-insights-action@85c35a5b75f2772e0462323d7b4fcbab5fc1aff2 -> cue-lang/setup-cue@v1.0.1. Pinning the direct reference does not pin this action."
+     },
+     "locations": [
+      {
+       "physicalLocation": {
+        "artifactLocation": {
+         "uri": ".github/workflows/security-insights.yml"
+        },
+        "region": {
+         "startLine": 39
+        }
+       }
+      }
+     ]
+    },
+    {
+     "ruleId": "APN002",
+     "level": "error",
+     "message": {
+      "text": "`slsa-framework/slsa-github-generator/.github/actions/secure-builder-checkout@v2.1.0` (tag) is pulled in transitively via .github/workflows/goreleaser.yaml -> slsa-framework/slsa-github-generator/.github/workflows/generator_generic_slsa3.yml@v2.1.0 -> slsa-framework/slsa-github-generator/.github/actions/generate-builder@v2.1.0 -> slsa-framework/slsa-github-generator/.github/actions/secure-builder-checkout@v2.1.0. Pinning the direct reference does not pin this action."
+     },
+     "locations": [
+      {
+       "physicalLocation": {
+        "artifactLocation": {
+         "uri": ".github/workflows/goreleaser.yaml"
+        },
+        "region": {
+         "startLine": 77
+        }
+       }
+      }
+     ]
+    },
+    {
+     "ruleId": "APN002",
+     "level": "error",
+     "message": {
+      "text": "`slsa-framework/slsa-github-generator/.github/actions/compute-sha256@v2.1.0` (tag) is pulled in transitively via .github/workflows/goreleaser.yaml -> slsa-framework/slsa-github-generator/.github/workflows/generator_generic_slsa3.yml@v2.1.0 -> slsa-framework/slsa-github-generator/.github/actions/secure-download-artifact@v2.1.0 -> slsa-framework/slsa-github-generator/.github/actions/compute-sha256@v2.1.0. Pinning the direct reference does not pin this action."
+     },
+     "locations": [
+      {
+       "physicalLocation": {
+        "artifactLocation": {
+         "uri": ".github/workflows/goreleaser.yaml"
+        },
+        "region": {
+         "startLine": 77
+        }
+       }
+      }
+     ]
+    }
+   ]
+  }
+ ]
+}

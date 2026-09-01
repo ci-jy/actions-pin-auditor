@@ -1,0 +1,192 @@
+{
+ "$schema": "https://json.schemastore.org/sarif-2.1.0.json",
+ "version": "2.1.0",
+ "runs": [
+  {
+   "tool": {
+    "driver": {
+     "name": "actpin",
+     "version": "0.1.0",
+     "informationUri": "https://github.com/",
+     "rules": [
+      {
+       "id": "APN001",
+       "name": "unpinned-direct",
+       "shortDescription": {
+        "text": "Action reference in this repository is not pinned to a full commit SHA"
+       },
+       "defaultConfiguration": {
+        "level": "error"
+       }
+      },
+      {
+       "id": "APN002",
+       "name": "unpinned-transitive",
+       "shortDescription": {
+        "text": "A pinned action or reusable workflow pulls in an unpinned action"
+       },
+       "defaultConfiguration": {
+        "level": "error"
+       }
+      },
+      {
+       "id": "APN003",
+       "name": "impostor-commit",
+       "shortDescription": {
+        "text": "Pinned SHA is not reachable from any branch or tag of the upstream repository"
+       },
+       "defaultConfiguration": {
+        "level": "error"
+       }
+      },
+      {
+       "id": "APN004",
+       "name": "tag-moved",
+       "shortDescription": {
+        "text": "A referenced tag now points at a different commit"
+       },
+       "defaultConfiguration": {
+        "level": "warning"
+       }
+      }
+     ]
+    }
+   },
+   "results": [
+    {
+     "ruleId": "APN002",
+     "level": "error",
+     "message": {
+      "text": "`actions/github-script@v7` (tag) is pulled in transitively via .github/workflows/test-compare.yml -> nearform-actions/github-action-test-compare@d50bc37a05e736bb40db0eebc8fdad3e33ece136 -> actions/github-script@v7. Pinning the direct reference does not pin this action."
+     },
+     "locations": [
+      {
+       "physicalLocation": {
+        "artifactLocation": {
+         "uri": ".github/workflows/test-compare.yml"
+        },
+        "region": {
+         "startLine": 18
+        }
+       }
+      }
+     ]
+    },
+    {
+     "ruleId": "APN002",
+     "level": "error",
+     "message": {
+      "text": "`actions/checkout@v4` (tag) is pulled in transitively via .github/workflows/test-compare.yml -> nearform-actions/github-action-test-compare@d50bc37a05e736bb40db0eebc8fdad3e33ece136 -> actions/checkout@v4. Pinning the direct reference does not pin this action."
+     },
+     "locations": [
+      {
+       "physicalLocation": {
+        "artifactLocation": {
+         "uri": ".github/workflows/test-compare.yml"
+        },
+        "region": {
+         "startLine": 18
+        }
+       }
+      }
+     ]
+    },
+    {
+     "ruleId": "APN002",
+     "level": "error",
+     "message": {
+      "text": "`actions/checkout@v4` (tag) is pulled in transitively via .github/workflows/test-compare.yml -> nearform-actions/github-action-test-compare@d50bc37a05e736bb40db0eebc8fdad3e33ece136 -> actions/checkout@v4. Pinning the direct reference does not pin this action."
+     },
+     "locations": [
+      {
+       "physicalLocation": {
+        "artifactLocation": {
+         "uri": ".github/workflows/test-compare.yml"
+        },
+        "region": {
+         "startLine": 18
+        }
+       }
+      }
+     ]
+    },
+    {
+     "ruleId": "APN002",
+     "level": "error",
+     "message": {
+      "text": "`peter-evans/find-comment@v3` (tag) is pulled in transitively via .github/workflows/test-compare.yml -> nearform-actions/github-action-test-compare@d50bc37a05e736bb40db0eebc8fdad3e33ece136 -> peter-evans/find-comment@v3. Pinning the direct reference does not pin this action."
+     },
+     "locations": [
+      {
+       "physicalLocation": {
+        "artifactLocation": {
+         "uri": ".github/workflows/test-compare.yml"
+        },
+        "region": {
+         "startLine": 18
+        }
+       }
+      }
+     ]
+    },
+    {
+     "ruleId": "APN002",
+     "level": "error",
+     "message": {
+      "text": "`peter-evans/create-or-update-comment@v4` (tag) is pulled in transitively via .github/workflows/test-compare.yml -> nearform-actions/github-action-test-compare@d50bc37a05e736bb40db0eebc8fdad3e33ece136 -> peter-evans/create-or-update-comment@v4. Pinning the direct reference does not pin this action."
+     },
+     "locations": [
+      {
+       "physicalLocation": {
+        "artifactLocation": {
+         "uri": ".github/workflows/test-compare.yml"
+        },
+        "region": {
+         "startLine": 18
+        }
+       }
+      }
+     ]
+    },
+    {
+     "ruleId": "APN002",
+     "level": "error",
+     "message": {
+      "text": "`actions/github-script@v7` (tag) is pulled in transitively via .github/workflows/test-compare.yml -> nearform-actions/github-action-test-compare@d50bc37a05e736bb40db0eebc8fdad3e33ece136 -> actions/github-script@v7. Pinning the direct reference does not pin this action."
+     },
+     "locations": [
+      {
+       "physicalLocation": {
+        "artifactLocation": {
+         "uri": ".github/workflows/test-compare.yml"
+        },
+        "region": {
+         "startLine": 18
+        }
+       }
+      }
+     ]
+    },
+    {
+     "ruleId": "APN002",
+     "level": "error",
+     "message": {
+      "text": "`actions/github-script@v7` (tag) is pulled in transitively via .github/workflows/test-compare.yml -> nearform-actions/github-action-test-compare@d50bc37a05e736bb40db0eebc8fdad3e33ece136 -> actions/github-script@v7. Pinning the direct reference does not pin this action."
+     },
+     "locations": [
+      {
+       "physicalLocation": {
+        "artifactLocation": {
+         "uri": ".github/workflows/test-compare.yml"
+        },
+        "region": {
+         "startLine": 18
+        }
+       }
+      }
+     ]
+    }
+   ]
+  }
+ ]
+}

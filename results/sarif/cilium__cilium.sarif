@@ -1,0 +1,211 @@
+{
+ "$schema": "https://json.schemastore.org/sarif-2.1.0.json",
+ "version": "2.1.0",
+ "runs": [
+  {
+   "tool": {
+    "driver": {
+     "name": "actpin",
+     "version": "0.1.0",
+     "informationUri": "https://github.com/",
+     "rules": [
+      {
+       "id": "APN001",
+       "name": "unpinned-direct",
+       "shortDescription": {
+        "text": "Action reference in this repository is not pinned to a full commit SHA"
+       },
+       "defaultConfiguration": {
+        "level": "error"
+       }
+      },
+      {
+       "id": "APN002",
+       "name": "unpinned-transitive",
+       "shortDescription": {
+        "text": "A pinned action or reusable workflow pulls in an unpinned action"
+       },
+       "defaultConfiguration": {
+        "level": "error"
+       }
+      },
+      {
+       "id": "APN003",
+       "name": "impostor-commit",
+       "shortDescription": {
+        "text": "Pinned SHA is not reachable from any branch or tag of the upstream repository"
+       },
+       "defaultConfiguration": {
+        "level": "error"
+       }
+      },
+      {
+       "id": "APN004",
+       "name": "tag-moved",
+       "shortDescription": {
+        "text": "A referenced tag now points at a different commit"
+       },
+       "defaultConfiguration": {
+        "level": "warning"
+       }
+      }
+     ]
+    }
+   },
+   "results": [
+    {
+     "ruleId": "APN001",
+     "level": "error",
+     "message": {
+      "text": "`cilium/cilium/.github/workflows/release.yaml@main` uses a mutable branch reference; pin it to a full SHA."
+     },
+     "locations": [
+      {
+       "physicalLocation": {
+        "artifactLocation": {
+         "uri": ".github/workflows/build-images-releases.yaml"
+        },
+        "region": {
+         "startLine": 263
+        }
+       }
+      }
+     ]
+    },
+    {
+     "ruleId": "APN001",
+     "level": "error",
+     "message": {
+      "text": "`cilium/cilium/.github/workflows/release.yaml@main` uses a mutable branch reference; pin it to a full SHA."
+     },
+     "locations": [
+      {
+       "physicalLocation": {
+        "artifactLocation": {
+         "uri": ".github/workflows/build-images-releases.yaml"
+        },
+        "region": {
+         "startLine": 286
+        }
+       }
+      }
+     ]
+    },
+    {
+     "ruleId": "APN001",
+     "level": "error",
+     "message": {
+      "text": "`cilium/cilium/.github/workflows/update-label-backport-pr.yaml@v1.20` uses a mutable tag reference; pin it to a full SHA."
+     },
+     "locations": [
+      {
+       "physicalLocation": {
+        "artifactLocation": {
+         "uri": ".github/workflows/call-backport-label-updater-v1.20.yaml"
+        },
+        "region": {
+         "startLine": 20
+        }
+       }
+      }
+     ]
+    },
+    {
+     "ruleId": "APN001",
+     "level": "error",
+     "message": {
+      "text": "`cilium/cilium/.github/workflows/update-label-backport-pr.yaml@main` uses a mutable branch reference; pin it to a full SHA."
+     },
+     "locations": [
+      {
+       "physicalLocation": {
+        "artifactLocation": {
+         "uri": ".github/workflows/call-backport-label-updater.yaml"
+        },
+        "region": {
+         "startLine": 23
+        }
+       }
+      }
+     ]
+    },
+    {
+     "ruleId": "APN001",
+     "level": "error",
+     "message": {
+      "text": "`cilium/cilium/.github/actions/merge-artifacts@main` uses a mutable branch reference; pin it to a full SHA."
+     },
+     "locations": [
+      {
+       "physicalLocation": {
+        "artifactLocation": {
+         "uri": ".github/workflows/common-post-jobs.yaml"
+        },
+        "region": {
+         "startLine": 51
+        }
+       }
+      }
+     ]
+    },
+    {
+     "ruleId": "APN001",
+     "level": "error",
+     "message": {
+      "text": "`cilium/cilium/.github/actions/merge-artifacts@main` uses a mutable branch reference; pin it to a full SHA."
+     },
+     "locations": [
+      {
+       "physicalLocation": {
+        "artifactLocation": {
+         "uri": ".github/workflows/common-post-jobs.yaml"
+        },
+        "region": {
+         "startLine": 60
+        }
+       }
+      }
+     ]
+    },
+    {
+     "ruleId": "APN001",
+     "level": "error",
+     "message": {
+      "text": "`cilium/cilium/.github/workflows/reusable-greetings.yml@main` uses a mutable branch reference; pin it to a full SHA."
+     },
+     "locations": [
+      {
+       "physicalLocation": {
+        "artifactLocation": {
+         "uri": ".github/workflows/greetings.yml"
+        },
+        "region": {
+         "startLine": 23
+        }
+       }
+      }
+     ]
+    },
+    {
+     "ruleId": "APN002",
+     "level": "error",
+     "message": {
+      "text": "`docker://mikefarah/yq:4-githubaction` (docker-tag) is pulled in transitively via .github/workflows/push-chart-ci.yaml -> cilium/reusable-workflows/.github/actions/push-helm-chart@ad5dbc4e2c7f7322efc87b0e20553d44e9de536e -> mikefarah/yq@751d8ad57b84f1794661bc70c0afb92a22ad7b3c -> docker://mikefarah/yq:4-githubaction. Pinning the direct reference does not pin this action."
+     },
+     "locations": [
+      {
+       "physicalLocation": {
+        "artifactLocation": {
+         "uri": ".github/workflows/push-chart-ci.yaml"
+        },
+        "region": {
+         "startLine": 190
+        }
+       }
+      }
+     ]
+    }
+   ]
+  }
+ ]
+}

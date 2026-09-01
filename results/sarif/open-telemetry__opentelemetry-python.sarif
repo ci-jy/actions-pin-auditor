@@ -1,0 +1,97 @@
+{
+ "$schema": "https://json.schemastore.org/sarif-2.1.0.json",
+ "version": "2.1.0",
+ "runs": [
+  {
+   "tool": {
+    "driver": {
+     "name": "actpin",
+     "version": "0.1.0",
+     "informationUri": "https://github.com/",
+     "rules": [
+      {
+       "id": "APN001",
+       "name": "unpinned-direct",
+       "shortDescription": {
+        "text": "Action reference in this repository is not pinned to a full commit SHA"
+       },
+       "defaultConfiguration": {
+        "level": "error"
+       }
+      },
+      {
+       "id": "APN002",
+       "name": "unpinned-transitive",
+       "shortDescription": {
+        "text": "A pinned action or reusable workflow pulls in an unpinned action"
+       },
+       "defaultConfiguration": {
+        "level": "error"
+       }
+      },
+      {
+       "id": "APN003",
+       "name": "impostor-commit",
+       "shortDescription": {
+        "text": "Pinned SHA is not reachable from any branch or tag of the upstream repository"
+       },
+       "defaultConfiguration": {
+        "level": "error"
+       }
+      },
+      {
+       "id": "APN004",
+       "name": "tag-moved",
+       "shortDescription": {
+        "text": "A referenced tag now points at a different commit"
+       },
+       "defaultConfiguration": {
+        "level": "warning"
+       }
+      }
+     ]
+    }
+   },
+   "results": [
+    {
+     "ruleId": "APN001",
+     "level": "error",
+     "message": {
+      "text": "`open-telemetry/opentelemetry-python-contrib/.github/workflows/core_contrib_test.yml@main` uses a mutable branch reference; pin it to a full SHA."
+     },
+     "locations": [
+      {
+       "physicalLocation": {
+        "artifactLocation": {
+         "uri": ".github/workflows/ci.yml"
+        },
+        "region": {
+         "startLine": 28
+        }
+       }
+      }
+     ]
+    },
+    {
+     "ruleId": "APN002",
+     "level": "error",
+     "message": {
+      "text": "`docker://ghcr.io/ossf/scorecard-action:v2.4.4` (docker-tag) is pulled in transitively via .github/workflows/ossf-scorecard.yml -> open-telemetry/shared-workflows/.github/workflows/scorecard.yml@c717adbcb56efc45c5dea293accfc6c3462bcdd1 -> ossf/scorecard-action@2d1146689b8cda280b9bc96326124645441f03bc -> docker://ghcr.io/ossf/scorecard-action:v2.4.4. Pinning the direct reference does not pin this action."
+     },
+     "locations": [
+      {
+       "physicalLocation": {
+        "artifactLocation": {
+         "uri": ".github/workflows/ossf-scorecard.yml"
+        },
+        "region": {
+         "startLine": 19
+        }
+       }
+      }
+     ]
+    }
+   ]
+  }
+ ]
+}

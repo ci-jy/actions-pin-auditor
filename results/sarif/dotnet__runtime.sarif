@@ -1,0 +1,458 @@
+{
+ "$schema": "https://json.schemastore.org/sarif-2.1.0.json",
+ "version": "2.1.0",
+ "runs": [
+  {
+   "tool": {
+    "driver": {
+     "name": "actpin",
+     "version": "0.1.0",
+     "informationUri": "https://github.com/",
+     "rules": [
+      {
+       "id": "APN001",
+       "name": "unpinned-direct",
+       "shortDescription": {
+        "text": "Action reference in this repository is not pinned to a full commit SHA"
+       },
+       "defaultConfiguration": {
+        "level": "error"
+       }
+      },
+      {
+       "id": "APN002",
+       "name": "unpinned-transitive",
+       "shortDescription": {
+        "text": "A pinned action or reusable workflow pulls in an unpinned action"
+       },
+       "defaultConfiguration": {
+        "level": "error"
+       }
+      },
+      {
+       "id": "APN003",
+       "name": "impostor-commit",
+       "shortDescription": {
+        "text": "Pinned SHA is not reachable from any branch or tag of the upstream repository"
+       },
+       "defaultConfiguration": {
+        "level": "error"
+       }
+      },
+      {
+       "id": "APN004",
+       "name": "tag-moved",
+       "shortDescription": {
+        "text": "A referenced tag now points at a different commit"
+       },
+       "defaultConfiguration": {
+        "level": "warning"
+       }
+      }
+     ]
+    }
+   },
+   "results": [
+    {
+     "ruleId": "APN001",
+     "level": "error",
+     "message": {
+      "text": "`actions/checkout@v7` uses a mutable tag reference; pin it to a full SHA."
+     },
+     "locations": [
+      {
+       "physicalLocation": {
+        "artifactLocation": {
+         "uri": ".github/workflows/aspnetcore-sync.yml"
+        },
+        "region": {
+         "startLine": 22
+        }
+       }
+      }
+     ]
+    },
+    {
+     "ruleId": "APN001",
+     "level": "error",
+     "message": {
+      "text": "`actions/checkout@v7` uses a mutable tag reference; pin it to a full SHA."
+     },
+     "locations": [
+      {
+       "physicalLocation": {
+        "artifactLocation": {
+         "uri": ".github/workflows/aspnetcore-sync.yml"
+        },
+        "region": {
+         "startLine": 30
+        }
+       }
+      }
+     ]
+    },
+    {
+     "ruleId": "APN001",
+     "level": "error",
+     "message": {
+      "text": "`actions/upload-artifact@v7` uses a mutable tag reference; pin it to a full SHA."
+     },
+     "locations": [
+      {
+       "physicalLocation": {
+        "artifactLocation": {
+         "uri": ".github/workflows/aspnetcore-sync.yml"
+        },
+        "region": {
+         "startLine": 50
+        }
+       }
+      }
+     ]
+    },
+    {
+     "ruleId": "APN001",
+     "level": "error",
+     "message": {
+      "text": "`dotnet/arcade/.github/workflows/backport-base.yml@main` uses a mutable branch reference; pin it to a full SHA."
+     },
+     "locations": [
+      {
+       "physicalLocation": {
+        "artifactLocation": {
+         "uri": ".github/workflows/backport.yml"
+        },
+        "region": {
+         "startLine": 18
+        }
+       }
+      }
+     ]
+    },
+    {
+     "ruleId": "APN001",
+     "level": "error",
+     "message": {
+      "text": "`actions/checkout@v7` uses a mutable tag reference; pin it to a full SHA."
+     },
+     "locations": [
+      {
+       "physicalLocation": {
+        "artifactLocation": {
+         "uri": ".github/workflows/bump-chrome-version.yml"
+        },
+        "region": {
+         "startLine": 19
+        }
+       }
+      }
+     ]
+    },
+    {
+     "ruleId": "APN001",
+     "level": "error",
+     "message": {
+      "text": "`actions/github-script@v9` uses a mutable tag reference; pin it to a full SHA."
+     },
+     "locations": [
+      {
+       "physicalLocation": {
+        "artifactLocation": {
+         "uri": ".github/workflows/bump-chrome-version.yml"
+        },
+        "region": {
+         "startLine": 50
+        }
+       }
+      }
+     ]
+    },
+    {
+     "ruleId": "APN001",
+     "level": "error",
+     "message": {
+      "text": "`actions/checkout@v7` uses a mutable tag reference; pin it to a full SHA."
+     },
+     "locations": [
+      {
+       "physicalLocation": {
+        "artifactLocation": {
+         "uri": ".github/workflows/copilot-setup-steps.yml"
+        },
+        "region": {
+         "startLine": 18
+        }
+       }
+      }
+     ]
+    },
+    {
+     "ruleId": "APN001",
+     "level": "error",
+     "message": {
+      "text": "`dotnet/arcade/.github/workflows/inter-branch-merge-base.yml@main` uses a mutable branch reference; pin it to a full SHA."
+     },
+     "locations": [
+      {
+       "physicalLocation": {
+        "artifactLocation": {
+         "uri": ".github/workflows/inter-branch-merge-flow.yml"
+        },
+        "region": {
+         "startLine": 13
+        }
+       }
+      }
+     ]
+    },
+    {
+     "ruleId": "APN001",
+     "level": "error",
+     "message": {
+      "text": "`actions/setup-dotnet@v6` uses a mutable tag reference; pin it to a full SHA."
+     },
+     "locations": [
+      {
+       "physicalLocation": {
+        "artifactLocation": {
+         "uri": ".github/workflows/jit-format.yml"
+        },
+        "region": {
+         "startLine": 35
+        }
+       }
+      }
+     ]
+    },
+    {
+     "ruleId": "APN001",
+     "level": "error",
+     "message": {
+      "text": "`actions/checkout@v7` uses a mutable tag reference; pin it to a full SHA."
+     },
+     "locations": [
+      {
+       "physicalLocation": {
+        "artifactLocation": {
+         "uri": ".github/workflows/jit-format.yml"
+        },
+        "region": {
+         "startLine": 39
+        }
+       }
+      }
+     ]
+    },
+    {
+     "ruleId": "APN001",
+     "level": "error",
+     "message": {
+      "text": "`actions/setup-python@v7` uses a mutable tag reference; pin it to a full SHA."
+     },
+     "locations": [
+      {
+       "physicalLocation": {
+        "artifactLocation": {
+         "uri": ".github/workflows/jit-format.yml"
+        },
+        "region": {
+         "startLine": 43
+        }
+       }
+      }
+     ]
+    },
+    {
+     "ruleId": "APN001",
+     "level": "error",
+     "message": {
+      "text": "`actions/upload-artifact@v7` uses a mutable tag reference; pin it to a full SHA."
+     },
+     "locations": [
+      {
+       "physicalLocation": {
+        "artifactLocation": {
+         "uri": ".github/workflows/jit-format.yml"
+        },
+        "region": {
+         "startLine": 52
+        }
+       }
+      }
+     ]
+    },
+    {
+     "ruleId": "APN001",
+     "level": "error",
+     "message": {
+      "text": "`actions/checkout@v7` uses a mutable tag reference; pin it to a full SHA."
+     },
+     "locations": [
+      {
+       "physicalLocation": {
+        "artifactLocation": {
+         "uri": ".github/workflows/locker.yml"
+        },
+        "region": {
+         "startLine": 33
+        }
+       }
+      }
+     ]
+    },
+    {
+     "ruleId": "APN001",
+     "level": "error",
+     "message": {
+      "text": "`actions/github-script@v9` uses a mutable tag reference; pin it to a full SHA."
+     },
+     "locations": [
+      {
+       "physicalLocation": {
+        "artifactLocation": {
+         "uri": ".github/workflows/locker.yml"
+        },
+        "region": {
+         "startLine": 52
+        }
+       }
+      }
+     ]
+    },
+    {
+     "ruleId": "APN001",
+     "level": "error",
+     "message": {
+      "text": "`actions/checkout@v7` uses a mutable tag reference; pin it to a full SHA."
+     },
+     "locations": [
+      {
+       "physicalLocation": {
+        "artifactLocation": {
+         "uri": ".github/workflows/markdownlint.yml"
+        },
+        "region": {
+         "startLine": 20
+        }
+       }
+      }
+     ]
+    },
+    {
+     "ruleId": "APN001",
+     "level": "error",
+     "message": {
+      "text": "`actions/setup-node@v7` uses a mutable tag reference; pin it to a full SHA."
+     },
+     "locations": [
+      {
+       "physicalLocation": {
+        "artifactLocation": {
+         "uri": ".github/workflows/markdownlint.yml"
+        },
+        "region": {
+         "startLine": 22
+        }
+       }
+      }
+     ]
+    },
+    {
+     "ruleId": "APN001",
+     "level": "error",
+     "message": {
+      "text": "`actions/checkout@v7` uses a mutable tag reference; pin it to a full SHA."
+     },
+     "locations": [
+      {
+       "physicalLocation": {
+        "artifactLocation": {
+         "uri": ".github/workflows/skill-validation.yml"
+        },
+        "region": {
+         "startLine": 30
+        }
+       }
+      }
+     ]
+    },
+    {
+     "ruleId": "APN002",
+     "level": "error",
+     "message": {
+      "text": "`dotnet/arcade/.github/workflows/scheduled-action-cleanup-base.yml@main` (branch) is pulled in transitively via .github/workflows/backport.yml -> dotnet/arcade/.github/workflows/backport-base.yml@main -> dotnet/arcade/.github/workflows/scheduled-action-cleanup-base.yml@main. Pinning the direct reference does not pin this action."
+     },
+     "locations": [
+      {
+       "physicalLocation": {
+        "artifactLocation": {
+         "uri": ".github/workflows/backport.yml"
+        },
+        "region": {
+         "startLine": 18
+        }
+       }
+      }
+     ]
+    },
+    {
+     "ruleId": "APN002",
+     "level": "error",
+     "message": {
+      "text": "`actions/checkout@v6` (tag) is pulled in transitively via .github/workflows/inter-branch-merge-flow.yml -> dotnet/arcade/.github/workflows/inter-branch-merge-base.yml@main -> actions/checkout@v6. Pinning the direct reference does not pin this action."
+     },
+     "locations": [
+      {
+       "physicalLocation": {
+        "artifactLocation": {
+         "uri": ".github/workflows/inter-branch-merge-flow.yml"
+        },
+        "region": {
+         "startLine": 13
+        }
+       }
+      }
+     ]
+    },
+    {
+     "ruleId": "APN002",
+     "level": "error",
+     "message": {
+      "text": "`actions/checkout@v6` (tag) is pulled in transitively via .github/workflows/inter-branch-merge-flow.yml -> dotnet/arcade/.github/workflows/inter-branch-merge-base.yml@main -> actions/checkout@v6. Pinning the direct reference does not pin this action."
+     },
+     "locations": [
+      {
+       "physicalLocation": {
+        "artifactLocation": {
+         "uri": ".github/workflows/inter-branch-merge-flow.yml"
+        },
+        "region": {
+         "startLine": 13
+        }
+       }
+      }
+     ]
+    },
+    {
+     "ruleId": "APN002",
+     "level": "error",
+     "message": {
+      "text": "`actions/github-script@v9` (tag) is pulled in transitively via .github/workflows/backport.yml -> dotnet/arcade/.github/workflows/backport-base.yml@main -> dotnet/arcade/.github/workflows/scheduled-action-cleanup-base.yml@main -> actions/github-script@v9. Pinning the direct reference does not pin this action."
+     },
+     "locations": [
+      {
+       "physicalLocation": {
+        "artifactLocation": {
+         "uri": ".github/workflows/backport.yml"
+        },
+        "region": {
+         "startLine": 18
+        }
+       }
+      }
+     ]
+    }
+   ]
+  }
+ ]
+}

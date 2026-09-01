@@ -1,0 +1,2320 @@
+{
+ "$schema": "https://json.schemastore.org/sarif-2.1.0.json",
+ "version": "2.1.0",
+ "runs": [
+  {
+   "tool": {
+    "driver": {
+     "name": "actpin",
+     "version": "0.1.0",
+     "informationUri": "https://github.com/",
+     "rules": [
+      {
+       "id": "APN001",
+       "name": "unpinned-direct",
+       "shortDescription": {
+        "text": "Action reference in this repository is not pinned to a full commit SHA"
+       },
+       "defaultConfiguration": {
+        "level": "error"
+       }
+      },
+      {
+       "id": "APN002",
+       "name": "unpinned-transitive",
+       "shortDescription": {
+        "text": "A pinned action or reusable workflow pulls in an unpinned action"
+       },
+       "defaultConfiguration": {
+        "level": "error"
+       }
+      },
+      {
+       "id": "APN003",
+       "name": "impostor-commit",
+       "shortDescription": {
+        "text": "Pinned SHA is not reachable from any branch or tag of the upstream repository"
+       },
+       "defaultConfiguration": {
+        "level": "error"
+       }
+      },
+      {
+       "id": "APN004",
+       "name": "tag-moved",
+       "shortDescription": {
+        "text": "A referenced tag now points at a different commit"
+       },
+       "defaultConfiguration": {
+        "level": "warning"
+       }
+      }
+     ]
+    }
+   },
+   "results": [
+    {
+     "ruleId": "APN001",
+     "level": "error",
+     "message": {
+      "text": "`actions/checkout@v6` uses a mutable tag reference; pin it to a full SHA."
+     },
+     "locations": [
+      {
+       "physicalLocation": {
+        "artifactLocation": {
+         "uri": ".github/workflows/ci.yml"
+        },
+        "region": {
+         "startLine": 25
+        }
+       }
+      }
+     ]
+    },
+    {
+     "ruleId": "APN001",
+     "level": "error",
+     "message": {
+      "text": "`actions/setup-node@v6` uses a mutable tag reference; pin it to a full SHA."
+     },
+     "locations": [
+      {
+       "physicalLocation": {
+        "artifactLocation": {
+         "uri": ".github/workflows/ci.yml"
+        },
+        "region": {
+         "startLine": 27
+        }
+       }
+      }
+     ]
+    },
+    {
+     "ruleId": "APN001",
+     "level": "error",
+     "message": {
+      "text": "`actions/checkout@v6` uses a mutable tag reference; pin it to a full SHA."
+     },
+     "locations": [
+      {
+       "physicalLocation": {
+        "artifactLocation": {
+         "uri": ".github/workflows/ci.yml"
+        },
+        "region": {
+         "startLine": 46
+        }
+       }
+      }
+     ]
+    },
+    {
+     "ruleId": "APN001",
+     "level": "error",
+     "message": {
+      "text": "`actions/setup-node@v6` uses a mutable tag reference; pin it to a full SHA."
+     },
+     "locations": [
+      {
+       "physicalLocation": {
+        "artifactLocation": {
+         "uri": ".github/workflows/ci.yml"
+        },
+        "region": {
+         "startLine": 48
+        }
+       }
+      }
+     ]
+    },
+    {
+     "ruleId": "APN001",
+     "level": "error",
+     "message": {
+      "text": "`actions/checkout@v6` uses a mutable tag reference; pin it to a full SHA."
+     },
+     "locations": [
+      {
+       "physicalLocation": {
+        "artifactLocation": {
+         "uri": ".github/workflows/ci.yml"
+        },
+        "region": {
+         "startLine": 78
+        }
+       }
+      }
+     ]
+    },
+    {
+     "ruleId": "APN001",
+     "level": "error",
+     "message": {
+      "text": "`actions/setup-node@v6` uses a mutable tag reference; pin it to a full SHA."
+     },
+     "locations": [
+      {
+       "physicalLocation": {
+        "artifactLocation": {
+         "uri": ".github/workflows/ci.yml"
+        },
+        "region": {
+         "startLine": 80
+        }
+       }
+      }
+     ]
+    },
+    {
+     "ruleId": "APN001",
+     "level": "error",
+     "message": {
+      "text": "`actions/upload-artifact@v7` uses a mutable tag reference; pin it to a full SHA."
+     },
+     "locations": [
+      {
+       "physicalLocation": {
+        "artifactLocation": {
+         "uri": ".github/workflows/ci.yml"
+        },
+        "region": {
+         "startLine": 107
+        }
+       }
+      }
+     ]
+    },
+    {
+     "ruleId": "APN001",
+     "level": "error",
+     "message": {
+      "text": "`actions/checkout@v6` uses a mutable tag reference; pin it to a full SHA."
+     },
+     "locations": [
+      {
+       "physicalLocation": {
+        "artifactLocation": {
+         "uri": ".github/workflows/ci.yml"
+        },
+        "region": {
+         "startLine": 128
+        }
+       }
+      }
+     ]
+    },
+    {
+     "ruleId": "APN001",
+     "level": "error",
+     "message": {
+      "text": "`actions/setup-node@v6` uses a mutable tag reference; pin it to a full SHA."
+     },
+     "locations": [
+      {
+       "physicalLocation": {
+        "artifactLocation": {
+         "uri": ".github/workflows/ci.yml"
+        },
+        "region": {
+         "startLine": 130
+        }
+       }
+      }
+     ]
+    },
+    {
+     "ruleId": "APN001",
+     "level": "error",
+     "message": {
+      "text": "`actions/checkout@v6` uses a mutable tag reference; pin it to a full SHA."
+     },
+     "locations": [
+      {
+       "physicalLocation": {
+        "artifactLocation": {
+         "uri": ".github/workflows/ci.yml"
+        },
+        "region": {
+         "startLine": 152
+        }
+       }
+      }
+     ]
+    },
+    {
+     "ruleId": "APN001",
+     "level": "error",
+     "message": {
+      "text": "`actions/setup-node@v6` uses a mutable tag reference; pin it to a full SHA."
+     },
+     "locations": [
+      {
+       "physicalLocation": {
+        "artifactLocation": {
+         "uri": ".github/workflows/ci.yml"
+        },
+        "region": {
+         "startLine": 154
+        }
+       }
+      }
+     ]
+    },
+    {
+     "ruleId": "APN001",
+     "level": "error",
+     "message": {
+      "text": "`actions/checkout@v6` uses a mutable tag reference; pin it to a full SHA."
+     },
+     "locations": [
+      {
+       "physicalLocation": {
+        "artifactLocation": {
+         "uri": ".github/workflows/ci.yml"
+        },
+        "region": {
+         "startLine": 171
+        }
+       }
+      }
+     ]
+    },
+    {
+     "ruleId": "APN001",
+     "level": "error",
+     "message": {
+      "text": "`actions/setup-node@v6` uses a mutable tag reference; pin it to a full SHA."
+     },
+     "locations": [
+      {
+       "physicalLocation": {
+        "artifactLocation": {
+         "uri": ".github/workflows/ci.yml"
+        },
+        "region": {
+         "startLine": 173
+        }
+       }
+      }
+     ]
+    },
+    {
+     "ruleId": "APN001",
+     "level": "error",
+     "message": {
+      "text": "`actions/download-artifact@v8` uses a mutable tag reference; pin it to a full SHA."
+     },
+     "locations": [
+      {
+       "physicalLocation": {
+        "artifactLocation": {
+         "uri": ".github/workflows/ci.yml"
+        },
+        "region": {
+         "startLine": 180
+        }
+       }
+      }
+     ]
+    },
+    {
+     "ruleId": "APN001",
+     "level": "error",
+     "message": {
+      "text": "`actions/checkout@v6` uses a mutable tag reference; pin it to a full SHA."
+     },
+     "locations": [
+      {
+       "physicalLocation": {
+        "artifactLocation": {
+         "uri": ".github/workflows/ci.yml"
+        },
+        "region": {
+         "startLine": 212
+        }
+       }
+      }
+     ]
+    },
+    {
+     "ruleId": "APN001",
+     "level": "error",
+     "message": {
+      "text": "`actions/setup-node@v6` uses a mutable tag reference; pin it to a full SHA."
+     },
+     "locations": [
+      {
+       "physicalLocation": {
+        "artifactLocation": {
+         "uri": ".github/workflows/ci.yml"
+        },
+        "region": {
+         "startLine": 214
+        }
+       }
+      }
+     ]
+    },
+    {
+     "ruleId": "APN001",
+     "level": "error",
+     "message": {
+      "text": "`actions/download-artifact@v8` uses a mutable tag reference; pin it to a full SHA."
+     },
+     "locations": [
+      {
+       "physicalLocation": {
+        "artifactLocation": {
+         "uri": ".github/workflows/ci.yml"
+        },
+        "region": {
+         "startLine": 222
+        }
+       }
+      }
+     ]
+    },
+    {
+     "ruleId": "APN001",
+     "level": "error",
+     "message": {
+      "text": "`codecov/codecov-action@v5` uses a mutable tag reference; pin it to a full SHA."
+     },
+     "locations": [
+      {
+       "physicalLocation": {
+        "artifactLocation": {
+         "uri": ".github/workflows/ci.yml"
+        },
+        "region": {
+         "startLine": 233
+        }
+       }
+      }
+     ]
+    },
+    {
+     "ruleId": "APN001",
+     "level": "error",
+     "message": {
+      "text": "`actions/checkout@v6` uses a mutable tag reference; pin it to a full SHA."
+     },
+     "locations": [
+      {
+       "physicalLocation": {
+        "artifactLocation": {
+         "uri": ".github/workflows/ci.yml"
+        },
+        "region": {
+         "startLine": 248
+        }
+       }
+      }
+     ]
+    },
+    {
+     "ruleId": "APN001",
+     "level": "error",
+     "message": {
+      "text": "`actions/setup-node@v6` uses a mutable tag reference; pin it to a full SHA."
+     },
+     "locations": [
+      {
+       "physicalLocation": {
+        "artifactLocation": {
+         "uri": ".github/workflows/ci.yml"
+        },
+        "region": {
+         "startLine": 250
+        }
+       }
+      }
+     ]
+    },
+    {
+     "ruleId": "APN001",
+     "level": "error",
+     "message": {
+      "text": "`actions/download-artifact@v8` uses a mutable tag reference; pin it to a full SHA."
+     },
+     "locations": [
+      {
+       "physicalLocation": {
+        "artifactLocation": {
+         "uri": ".github/workflows/ci.yml"
+        },
+        "region": {
+         "startLine": 258
+        }
+       }
+      }
+     ]
+    },
+    {
+     "ruleId": "APN001",
+     "level": "error",
+     "message": {
+      "text": "`actions/setup-node@v6` uses a mutable tag reference; pin it to a full SHA."
+     },
+     "locations": [
+      {
+       "physicalLocation": {
+        "artifactLocation": {
+         "uri": ".github/workflows/ci.yml"
+        },
+        "region": {
+         "startLine": 262
+        }
+       }
+      }
+     ]
+    },
+    {
+     "ruleId": "APN001",
+     "level": "error",
+     "message": {
+      "text": "`actions/checkout@v6` uses a mutable tag reference; pin it to a full SHA."
+     },
+     "locations": [
+      {
+       "physicalLocation": {
+        "artifactLocation": {
+         "uri": ".github/workflows/ci.yml"
+        },
+        "region": {
+         "startLine": 286
+        }
+       }
+      }
+     ]
+    },
+    {
+     "ruleId": "APN001",
+     "level": "error",
+     "message": {
+      "text": "`actions/setup-node@v6` uses a mutable tag reference; pin it to a full SHA."
+     },
+     "locations": [
+      {
+       "physicalLocation": {
+        "artifactLocation": {
+         "uri": ".github/workflows/ci.yml"
+        },
+        "region": {
+         "startLine": 288
+        }
+       }
+      }
+     ]
+    },
+    {
+     "ruleId": "APN001",
+     "level": "error",
+     "message": {
+      "text": "`actions/download-artifact@v8` uses a mutable tag reference; pin it to a full SHA."
+     },
+     "locations": [
+      {
+       "physicalLocation": {
+        "artifactLocation": {
+         "uri": ".github/workflows/ci.yml"
+        },
+        "region": {
+         "startLine": 295
+        }
+       }
+      }
+     ]
+    },
+    {
+     "ruleId": "APN001",
+     "level": "error",
+     "message": {
+      "text": "`actions/checkout@v6` uses a mutable tag reference; pin it to a full SHA."
+     },
+     "locations": [
+      {
+       "physicalLocation": {
+        "artifactLocation": {
+         "uri": ".github/workflows/ci.yml"
+        },
+        "region": {
+         "startLine": 312
+        }
+       }
+      }
+     ]
+    },
+    {
+     "ruleId": "APN001",
+     "level": "error",
+     "message": {
+      "text": "`actions/setup-node@v6` uses a mutable tag reference; pin it to a full SHA."
+     },
+     "locations": [
+      {
+       "physicalLocation": {
+        "artifactLocation": {
+         "uri": ".github/workflows/ci.yml"
+        },
+        "region": {
+         "startLine": 314
+        }
+       }
+      }
+     ]
+    },
+    {
+     "ruleId": "APN001",
+     "level": "error",
+     "message": {
+      "text": "`actions/upload-artifact@v7` uses a mutable tag reference; pin it to a full SHA."
+     },
+     "locations": [
+      {
+       "physicalLocation": {
+        "artifactLocation": {
+         "uri": ".github/workflows/ci.yml"
+        },
+        "region": {
+         "startLine": 326
+        }
+       }
+      }
+     ]
+    },
+    {
+     "ruleId": "APN001",
+     "level": "error",
+     "message": {
+      "text": "`actions/checkout@v6` uses a mutable tag reference; pin it to a full SHA."
+     },
+     "locations": [
+      {
+       "physicalLocation": {
+        "artifactLocation": {
+         "uri": ".github/workflows/ci.yml"
+        },
+        "region": {
+         "startLine": 345
+        }
+       }
+      }
+     ]
+    },
+    {
+     "ruleId": "APN001",
+     "level": "error",
+     "message": {
+      "text": "`actions/setup-node@v6` uses a mutable tag reference; pin it to a full SHA."
+     },
+     "locations": [
+      {
+       "physicalLocation": {
+        "artifactLocation": {
+         "uri": ".github/workflows/ci.yml"
+        },
+        "region": {
+         "startLine": 347
+        }
+       }
+      }
+     ]
+    },
+    {
+     "ruleId": "APN001",
+     "level": "error",
+     "message": {
+      "text": "`actions/download-artifact@v8` uses a mutable tag reference; pin it to a full SHA."
+     },
+     "locations": [
+      {
+       "physicalLocation": {
+        "artifactLocation": {
+         "uri": ".github/workflows/ci.yml"
+        },
+        "region": {
+         "startLine": 354
+        }
+       }
+      }
+     ]
+    },
+    {
+     "ruleId": "APN001",
+     "level": "error",
+     "message": {
+      "text": "`actions/checkout@v6` uses a mutable tag reference; pin it to a full SHA."
+     },
+     "locations": [
+      {
+       "physicalLocation": {
+        "artifactLocation": {
+         "uri": ".github/workflows/ci.yml"
+        },
+        "region": {
+         "startLine": 369
+        }
+       }
+      }
+     ]
+    },
+    {
+     "ruleId": "APN001",
+     "level": "error",
+     "message": {
+      "text": "`actions/setup-node@v6` uses a mutable tag reference; pin it to a full SHA."
+     },
+     "locations": [
+      {
+       "physicalLocation": {
+        "artifactLocation": {
+         "uri": ".github/workflows/ci.yml"
+        },
+        "region": {
+         "startLine": 371
+        }
+       }
+      }
+     ]
+    },
+    {
+     "ruleId": "APN001",
+     "level": "error",
+     "message": {
+      "text": "`actions/download-artifact@v8` uses a mutable tag reference; pin it to a full SHA."
+     },
+     "locations": [
+      {
+       "physicalLocation": {
+        "artifactLocation": {
+         "uri": ".github/workflows/ci.yml"
+        },
+        "region": {
+         "startLine": 379
+        }
+       }
+      }
+     ]
+    },
+    {
+     "ruleId": "APN001",
+     "level": "error",
+     "message": {
+      "text": "`codecov/codecov-action@v5` uses a mutable tag reference; pin it to a full SHA."
+     },
+     "locations": [
+      {
+       "physicalLocation": {
+        "artifactLocation": {
+         "uri": ".github/workflows/ci.yml"
+        },
+        "region": {
+         "startLine": 390
+        }
+       }
+      }
+     ]
+    },
+    {
+     "ruleId": "APN001",
+     "level": "error",
+     "message": {
+      "text": "`actions/checkout@v6` uses a mutable tag reference; pin it to a full SHA."
+     },
+     "locations": [
+      {
+       "physicalLocation": {
+        "artifactLocation": {
+         "uri": ".github/workflows/ci.yml"
+        },
+        "region": {
+         "startLine": 405
+        }
+       }
+      }
+     ]
+    },
+    {
+     "ruleId": "APN001",
+     "level": "error",
+     "message": {
+      "text": "`actions/setup-node@v6` uses a mutable tag reference; pin it to a full SHA."
+     },
+     "locations": [
+      {
+       "physicalLocation": {
+        "artifactLocation": {
+         "uri": ".github/workflows/ci.yml"
+        },
+        "region": {
+         "startLine": 407
+        }
+       }
+      }
+     ]
+    },
+    {
+     "ruleId": "APN001",
+     "level": "error",
+     "message": {
+      "text": "`actions/download-artifact@v8` uses a mutable tag reference; pin it to a full SHA."
+     },
+     "locations": [
+      {
+       "physicalLocation": {
+        "artifactLocation": {
+         "uri": ".github/workflows/ci.yml"
+        },
+        "region": {
+         "startLine": 414
+        }
+       }
+      }
+     ]
+    },
+    {
+     "ruleId": "APN001",
+     "level": "error",
+     "message": {
+      "text": "`actions/checkout@v6` uses a mutable tag reference; pin it to a full SHA."
+     },
+     "locations": [
+      {
+       "physicalLocation": {
+        "artifactLocation": {
+         "uri": ".github/workflows/ci.yml"
+        },
+        "region": {
+         "startLine": 429
+        }
+       }
+      }
+     ]
+    },
+    {
+     "ruleId": "APN001",
+     "level": "error",
+     "message": {
+      "text": "`actions/setup-node@v6` uses a mutable tag reference; pin it to a full SHA."
+     },
+     "locations": [
+      {
+       "physicalLocation": {
+        "artifactLocation": {
+         "uri": ".github/workflows/ci.yml"
+        },
+        "region": {
+         "startLine": 431
+        }
+       }
+      }
+     ]
+    },
+    {
+     "ruleId": "APN001",
+     "level": "error",
+     "message": {
+      "text": "`actions/download-artifact@v8` uses a mutable tag reference; pin it to a full SHA."
+     },
+     "locations": [
+      {
+       "physicalLocation": {
+        "artifactLocation": {
+         "uri": ".github/workflows/ci.yml"
+        },
+        "region": {
+         "startLine": 438
+        }
+       }
+      }
+     ]
+    },
+    {
+     "ruleId": "APN001",
+     "level": "error",
+     "message": {
+      "text": "`actions/checkout@v6` uses a mutable tag reference; pin it to a full SHA."
+     },
+     "locations": [
+      {
+       "physicalLocation": {
+        "artifactLocation": {
+         "uri": ".github/workflows/ci.yml"
+        },
+        "region": {
+         "startLine": 456
+        }
+       }
+      }
+     ]
+    },
+    {
+     "ruleId": "APN001",
+     "level": "error",
+     "message": {
+      "text": "`actions/setup-node@v6` uses a mutable tag reference; pin it to a full SHA."
+     },
+     "locations": [
+      {
+       "physicalLocation": {
+        "artifactLocation": {
+         "uri": ".github/workflows/ci.yml"
+        },
+        "region": {
+         "startLine": 458
+        }
+       }
+      }
+     ]
+    },
+    {
+     "ruleId": "APN001",
+     "level": "error",
+     "message": {
+      "text": "`actions/download-artifact@v8` uses a mutable tag reference; pin it to a full SHA."
+     },
+     "locations": [
+      {
+       "physicalLocation": {
+        "artifactLocation": {
+         "uri": ".github/workflows/ci.yml"
+        },
+        "region": {
+         "startLine": 485
+        }
+       }
+      }
+     ]
+    },
+    {
+     "ruleId": "APN001",
+     "level": "error",
+     "message": {
+      "text": "`actions/checkout@v6` uses a mutable tag reference; pin it to a full SHA."
+     },
+     "locations": [
+      {
+       "physicalLocation": {
+        "artifactLocation": {
+         "uri": ".github/workflows/ci.yml"
+        },
+        "region": {
+         "startLine": 522
+        }
+       }
+      }
+     ]
+    },
+    {
+     "ruleId": "APN001",
+     "level": "error",
+     "message": {
+      "text": "`actions/setup-node@v6` uses a mutable tag reference; pin it to a full SHA."
+     },
+     "locations": [
+      {
+       "physicalLocation": {
+        "artifactLocation": {
+         "uri": ".github/workflows/ci.yml"
+        },
+        "region": {
+         "startLine": 524
+        }
+       }
+      }
+     ]
+    },
+    {
+     "ruleId": "APN001",
+     "level": "error",
+     "message": {
+      "text": "`actions/download-artifact@v8` uses a mutable tag reference; pin it to a full SHA."
+     },
+     "locations": [
+      {
+       "physicalLocation": {
+        "artifactLocation": {
+         "uri": ".github/workflows/ci.yml"
+        },
+        "region": {
+         "startLine": 551
+        }
+       }
+      }
+     ]
+    },
+    {
+     "ruleId": "APN001",
+     "level": "error",
+     "message": {
+      "text": "`actions/setup-node@v6` uses a mutable tag reference; pin it to a full SHA."
+     },
+     "locations": [
+      {
+       "physicalLocation": {
+        "artifactLocation": {
+         "uri": ".github/workflows/ci.yml"
+        },
+        "region": {
+         "startLine": 557
+        }
+       }
+      }
+     ]
+    },
+    {
+     "ruleId": "APN001",
+     "level": "error",
+     "message": {
+      "text": "`actions/checkout@v6` uses a mutable tag reference; pin it to a full SHA."
+     },
+     "locations": [
+      {
+       "physicalLocation": {
+        "artifactLocation": {
+         "uri": ".github/workflows/ci.yml"
+        },
+        "region": {
+         "startLine": 573
+        }
+       }
+      }
+     ]
+    },
+    {
+     "ruleId": "APN001",
+     "level": "error",
+     "message": {
+      "text": "`actions/setup-node@v6` uses a mutable tag reference; pin it to a full SHA."
+     },
+     "locations": [
+      {
+       "physicalLocation": {
+        "artifactLocation": {
+         "uri": ".github/workflows/ci.yml"
+        },
+        "region": {
+         "startLine": 575
+        }
+       }
+      }
+     ]
+    },
+    {
+     "ruleId": "APN001",
+     "level": "error",
+     "message": {
+      "text": "`actions/download-artifact@v8` uses a mutable tag reference; pin it to a full SHA."
+     },
+     "locations": [
+      {
+       "physicalLocation": {
+        "artifactLocation": {
+         "uri": ".github/workflows/ci.yml"
+        },
+        "region": {
+         "startLine": 581
+        }
+       }
+      }
+     ]
+    },
+    {
+     "ruleId": "APN001",
+     "level": "error",
+     "message": {
+      "text": "`actions/checkout@v6` uses a mutable tag reference; pin it to a full SHA."
+     },
+     "locations": [
+      {
+       "physicalLocation": {
+        "artifactLocation": {
+         "uri": ".github/workflows/ci.yml"
+        },
+        "region": {
+         "startLine": 595
+        }
+       }
+      }
+     ]
+    },
+    {
+     "ruleId": "APN001",
+     "level": "error",
+     "message": {
+      "text": "`actions/setup-node@v6` uses a mutable tag reference; pin it to a full SHA."
+     },
+     "locations": [
+      {
+       "physicalLocation": {
+        "artifactLocation": {
+         "uri": ".github/workflows/ci.yml"
+        },
+        "region": {
+         "startLine": 597
+        }
+       }
+      }
+     ]
+    },
+    {
+     "ruleId": "APN001",
+     "level": "error",
+     "message": {
+      "text": "`actions/checkout@v6` uses a mutable tag reference; pin it to a full SHA."
+     },
+     "locations": [
+      {
+       "physicalLocation": {
+        "artifactLocation": {
+         "uri": ".github/workflows/ci.yml"
+        },
+        "region": {
+         "startLine": 602
+        }
+       }
+      }
+     ]
+    },
+    {
+     "ruleId": "APN001",
+     "level": "error",
+     "message": {
+      "text": "`actions/upload-artifact@v7` uses a mutable tag reference; pin it to a full SHA."
+     },
+     "locations": [
+      {
+       "physicalLocation": {
+        "artifactLocation": {
+         "uri": ".github/workflows/ci.yml"
+        },
+        "region": {
+         "startLine": 617
+        }
+       }
+      }
+     ]
+    },
+    {
+     "ruleId": "APN001",
+     "level": "error",
+     "message": {
+      "text": "`actions/checkout@v6` uses a mutable tag reference; pin it to a full SHA."
+     },
+     "locations": [
+      {
+       "physicalLocation": {
+        "artifactLocation": {
+         "uri": ".github/workflows/ci.yml"
+        },
+        "region": {
+         "startLine": 632
+        }
+       }
+      }
+     ]
+    },
+    {
+     "ruleId": "APN001",
+     "level": "error",
+     "message": {
+      "text": "`actions/setup-node@v6` uses a mutable tag reference; pin it to a full SHA."
+     },
+     "locations": [
+      {
+       "physicalLocation": {
+        "artifactLocation": {
+         "uri": ".github/workflows/ci.yml"
+        },
+        "region": {
+         "startLine": 634
+        }
+       }
+      }
+     ]
+    },
+    {
+     "ruleId": "APN001",
+     "level": "error",
+     "message": {
+      "text": "`actions/download-artifact@v8` uses a mutable tag reference; pin it to a full SHA."
+     },
+     "locations": [
+      {
+       "physicalLocation": {
+        "artifactLocation": {
+         "uri": ".github/workflows/ci.yml"
+        },
+        "region": {
+         "startLine": 640
+        }
+       }
+      }
+     ]
+    },
+    {
+     "ruleId": "APN001",
+     "level": "error",
+     "message": {
+      "text": "`actions/checkout@v6` uses a mutable tag reference; pin it to a full SHA."
+     },
+     "locations": [
+      {
+       "physicalLocation": {
+        "artifactLocation": {
+         "uri": ".github/workflows/ci.yml"
+        },
+        "region": {
+         "startLine": 644
+        }
+       }
+      }
+     ]
+    },
+    {
+     "ruleId": "APN001",
+     "level": "error",
+     "message": {
+      "text": "`actions/download-artifact@v8` uses a mutable tag reference; pin it to a full SHA."
+     },
+     "locations": [
+      {
+       "physicalLocation": {
+        "artifactLocation": {
+         "uri": ".github/workflows/ci.yml"
+        },
+        "region": {
+         "startLine": 657
+        }
+       }
+      }
+     ]
+    },
+    {
+     "ruleId": "APN001",
+     "level": "error",
+     "message": {
+      "text": "`actions/upload-artifact@v7` uses a mutable tag reference; pin it to a full SHA."
+     },
+     "locations": [
+      {
+       "physicalLocation": {
+        "artifactLocation": {
+         "uri": ".github/workflows/ci.yml"
+        },
+        "region": {
+         "startLine": 674
+        }
+       }
+      }
+     ]
+    },
+    {
+     "ruleId": "APN001",
+     "level": "error",
+     "message": {
+      "text": "`actions/download-artifact@v8` uses a mutable tag reference; pin it to a full SHA."
+     },
+     "locations": [
+      {
+       "physicalLocation": {
+        "artifactLocation": {
+         "uri": ".github/workflows/ci.yml"
+        },
+        "region": {
+         "startLine": 685
+        }
+       }
+      }
+     ]
+    },
+    {
+     "ruleId": "APN001",
+     "level": "error",
+     "message": {
+      "text": "`actions/download-artifact@v8` uses a mutable tag reference; pin it to a full SHA."
+     },
+     "locations": [
+      {
+       "physicalLocation": {
+        "artifactLocation": {
+         "uri": ".github/workflows/ci.yml"
+        },
+        "region": {
+         "startLine": 687
+        }
+       }
+      }
+     ]
+    },
+    {
+     "ruleId": "APN001",
+     "level": "error",
+     "message": {
+      "text": "`actions/download-artifact@v8` uses a mutable tag reference; pin it to a full SHA."
+     },
+     "locations": [
+      {
+       "physicalLocation": {
+        "artifactLocation": {
+         "uri": ".github/workflows/ci.yml"
+        },
+        "region": {
+         "startLine": 689
+        }
+       }
+      }
+     ]
+    },
+    {
+     "ruleId": "APN001",
+     "level": "error",
+     "message": {
+      "text": "`actions/download-artifact@v8` uses a mutable tag reference; pin it to a full SHA."
+     },
+     "locations": [
+      {
+       "physicalLocation": {
+        "artifactLocation": {
+         "uri": ".github/workflows/ci.yml"
+        },
+        "region": {
+         "startLine": 691
+        }
+       }
+      }
+     ]
+    },
+    {
+     "ruleId": "APN001",
+     "level": "error",
+     "message": {
+      "text": "`actions/download-artifact@v8` uses a mutable tag reference; pin it to a full SHA."
+     },
+     "locations": [
+      {
+       "physicalLocation": {
+        "artifactLocation": {
+         "uri": ".github/workflows/ci.yml"
+        },
+        "region": {
+         "startLine": 693
+        }
+       }
+      }
+     ]
+    },
+    {
+     "ruleId": "APN001",
+     "level": "error",
+     "message": {
+      "text": "`actions/download-artifact@v8` uses a mutable tag reference; pin it to a full SHA."
+     },
+     "locations": [
+      {
+       "physicalLocation": {
+        "artifactLocation": {
+         "uri": ".github/workflows/ci.yml"
+        },
+        "region": {
+         "startLine": 695
+        }
+       }
+      }
+     ]
+    },
+    {
+     "ruleId": "APN001",
+     "level": "error",
+     "message": {
+      "text": "`actions/download-artifact@v8` uses a mutable tag reference; pin it to a full SHA."
+     },
+     "locations": [
+      {
+       "physicalLocation": {
+        "artifactLocation": {
+         "uri": ".github/workflows/ci.yml"
+        },
+        "region": {
+         "startLine": 697
+        }
+       }
+      }
+     ]
+    },
+    {
+     "ruleId": "APN001",
+     "level": "error",
+     "message": {
+      "text": "`actions/download-artifact@v8` uses a mutable tag reference; pin it to a full SHA."
+     },
+     "locations": [
+      {
+       "physicalLocation": {
+        "artifactLocation": {
+         "uri": ".github/workflows/ci.yml"
+        },
+        "region": {
+         "startLine": 699
+        }
+       }
+      }
+     ]
+    },
+    {
+     "ruleId": "APN001",
+     "level": "error",
+     "message": {
+      "text": "`actions/upload-artifact@v7` uses a mutable tag reference; pin it to a full SHA."
+     },
+     "locations": [
+      {
+       "physicalLocation": {
+        "artifactLocation": {
+         "uri": ".github/workflows/ci.yml"
+        },
+        "region": {
+         "startLine": 707
+        }
+       }
+      }
+     ]
+    },
+    {
+     "ruleId": "APN001",
+     "level": "error",
+     "message": {
+      "text": "`actions/checkout@v6` uses a mutable tag reference; pin it to a full SHA."
+     },
+     "locations": [
+      {
+       "physicalLocation": {
+        "artifactLocation": {
+         "uri": ".github/workflows/ci.yml"
+        },
+        "region": {
+         "startLine": 712
+        }
+       }
+      }
+     ]
+    },
+    {
+     "ruleId": "APN001",
+     "level": "error",
+     "message": {
+      "text": "`actions/checkout@v6` uses a mutable tag reference; pin it to a full SHA."
+     },
+     "locations": [
+      {
+       "physicalLocation": {
+        "artifactLocation": {
+         "uri": ".github/workflows/ci.yml"
+        },
+        "region": {
+         "startLine": 738
+        }
+       }
+      }
+     ]
+    },
+    {
+     "ruleId": "APN001",
+     "level": "error",
+     "message": {
+      "text": "`actions/setup-node@v6` uses a mutable tag reference; pin it to a full SHA."
+     },
+     "locations": [
+      {
+       "physicalLocation": {
+        "artifactLocation": {
+         "uri": ".github/workflows/ci.yml"
+        },
+        "region": {
+         "startLine": 740
+        }
+       }
+      }
+     ]
+    },
+    {
+     "ruleId": "APN001",
+     "level": "error",
+     "message": {
+      "text": "`actions/checkout@v6` uses a mutable tag reference; pin it to a full SHA."
+     },
+     "locations": [
+      {
+       "physicalLocation": {
+        "artifactLocation": {
+         "uri": ".github/workflows/ci.yml"
+        },
+        "region": {
+         "startLine": 755
+        }
+       }
+      }
+     ]
+    },
+    {
+     "ruleId": "APN001",
+     "level": "error",
+     "message": {
+      "text": "`actions/setup-node@v6` uses a mutable tag reference; pin it to a full SHA."
+     },
+     "locations": [
+      {
+       "physicalLocation": {
+        "artifactLocation": {
+         "uri": ".github/workflows/ci.yml"
+        },
+        "region": {
+         "startLine": 757
+        }
+       }
+      }
+     ]
+    },
+    {
+     "ruleId": "APN001",
+     "level": "error",
+     "message": {
+      "text": "`actions/checkout@v6` uses a mutable tag reference; pin it to a full SHA."
+     },
+     "locations": [
+      {
+       "physicalLocation": {
+        "artifactLocation": {
+         "uri": ".github/workflows/e2e-tests.yml"
+        },
+        "region": {
+         "startLine": 22
+        }
+       }
+      }
+     ]
+    },
+    {
+     "ruleId": "APN001",
+     "level": "error",
+     "message": {
+      "text": "`actions/setup-node@v6` uses a mutable tag reference; pin it to a full SHA."
+     },
+     "locations": [
+      {
+       "physicalLocation": {
+        "artifactLocation": {
+         "uri": ".github/workflows/e2e-tests.yml"
+        },
+        "region": {
+         "startLine": 26
+        }
+       }
+      }
+     ]
+    },
+    {
+     "ruleId": "APN001",
+     "level": "error",
+     "message": {
+      "text": "`actions/upload-artifact@v7` uses a mutable tag reference; pin it to a full SHA."
+     },
+     "locations": [
+      {
+       "physicalLocation": {
+        "artifactLocation": {
+         "uri": ".github/workflows/e2e-tests.yml"
+        },
+        "region": {
+         "startLine": 35
+        }
+       }
+      }
+     ]
+    },
+    {
+     "ruleId": "APN001",
+     "level": "error",
+     "message": {
+      "text": "`actions/checkout@v6` uses a mutable tag reference; pin it to a full SHA."
+     },
+     "locations": [
+      {
+       "physicalLocation": {
+        "artifactLocation": {
+         "uri": ".github/workflows/e2e-tests.yml"
+        },
+        "region": {
+         "startLine": 63
+        }
+       }
+      }
+     ]
+    },
+    {
+     "ruleId": "APN001",
+     "level": "error",
+     "message": {
+      "text": "`actions/setup-node@v6` uses a mutable tag reference; pin it to a full SHA."
+     },
+     "locations": [
+      {
+       "physicalLocation": {
+        "artifactLocation": {
+         "uri": ".github/workflows/e2e-tests.yml"
+        },
+        "region": {
+         "startLine": 69
+        }
+       }
+      }
+     ]
+    },
+    {
+     "ruleId": "APN001",
+     "level": "error",
+     "message": {
+      "text": "`actions/cache@v5` uses a mutable tag reference; pin it to a full SHA."
+     },
+     "locations": [
+      {
+       "physicalLocation": {
+        "artifactLocation": {
+         "uri": ".github/workflows/e2e-tests.yml"
+        },
+        "region": {
+         "startLine": 76
+        }
+       }
+      }
+     ]
+    },
+    {
+     "ruleId": "APN001",
+     "level": "error",
+     "message": {
+      "text": "`actions/cache@v5` uses a mutable tag reference; pin it to a full SHA."
+     },
+     "locations": [
+      {
+       "physicalLocation": {
+        "artifactLocation": {
+         "uri": ".github/workflows/e2e-tests.yml"
+        },
+        "region": {
+         "startLine": 83
+        }
+       }
+      }
+     ]
+    },
+    {
+     "ruleId": "APN001",
+     "level": "error",
+     "message": {
+      "text": "`actions/download-artifact@v8` uses a mutable tag reference; pin it to a full SHA."
+     },
+     "locations": [
+      {
+       "physicalLocation": {
+        "artifactLocation": {
+         "uri": ".github/workflows/e2e-tests.yml"
+        },
+        "region": {
+         "startLine": 93
+        }
+       }
+      }
+     ]
+    },
+    {
+     "ruleId": "APN001",
+     "level": "error",
+     "message": {
+      "text": "`babel/actions/is-org-member@v2` uses a mutable tag reference; pin it to a full SHA."
+     },
+     "locations": [
+      {
+       "physicalLocation": {
+        "artifactLocation": {
+         "uri": ".github/workflows/issue-triage.yml"
+        },
+        "region": {
+         "startLine": 18
+        }
+       }
+      }
+     ]
+    },
+    {
+     "ruleId": "APN001",
+     "level": "error",
+     "message": {
+      "text": "`babel/actions/create-comment@v2` uses a mutable tag reference; pin it to a full SHA."
+     },
+     "locations": [
+      {
+       "physicalLocation": {
+        "artifactLocation": {
+         "uri": ".github/workflows/issue-triage.yml"
+        },
+        "region": {
+         "startLine": 24
+        }
+       }
+      }
+     ]
+    },
+    {
+     "ruleId": "APN001",
+     "level": "error",
+     "message": {
+      "text": "`babel/actions/create-comment@v2` uses a mutable tag reference; pin it to a full SHA."
+     },
+     "locations": [
+      {
+       "physicalLocation": {
+        "artifactLocation": {
+         "uri": ".github/workflows/issue-triage.yml"
+        },
+        "region": {
+         "startLine": 48
+        }
+       }
+      }
+     ]
+    },
+    {
+     "ruleId": "APN001",
+     "level": "error",
+     "message": {
+      "text": "`babel/actions/create-comment@v2` uses a mutable tag reference; pin it to a full SHA."
+     },
+     "locations": [
+      {
+       "physicalLocation": {
+        "artifactLocation": {
+         "uri": ".github/workflows/issue-triage.yml"
+        },
+        "region": {
+         "startLine": 90
+        }
+       }
+      }
+     ]
+    },
+    {
+     "ruleId": "APN001",
+     "level": "error",
+     "message": {
+      "text": "`dessant/lock-threads@v4` uses a mutable tag reference; pin it to a full SHA."
+     },
+     "locations": [
+      {
+       "physicalLocation": {
+        "artifactLocation": {
+         "uri": ".github/workflows/lock.yml"
+        },
+        "region": {
+         "startLine": 16
+        }
+       }
+      }
+     ]
+    },
+    {
+     "ruleId": "APN001",
+     "level": "error",
+     "message": {
+      "text": "`actions/checkout@v6` uses a mutable tag reference; pin it to a full SHA."
+     },
+     "locations": [
+      {
+       "physicalLocation": {
+        "artifactLocation": {
+         "uri": ".github/workflows/package-manager.yml"
+        },
+        "region": {
+         "startLine": 20
+        }
+       }
+      }
+     ]
+    },
+    {
+     "ruleId": "APN001",
+     "level": "error",
+     "message": {
+      "text": "`actions/setup-node@v6` uses a mutable tag reference; pin it to a full SHA."
+     },
+     "locations": [
+      {
+       "physicalLocation": {
+        "artifactLocation": {
+         "uri": ".github/workflows/package-manager.yml"
+        },
+        "region": {
+         "startLine": 22
+        }
+       }
+      }
+     ]
+    },
+    {
+     "ruleId": "APN001",
+     "level": "error",
+     "message": {
+      "text": "`actions/checkout@v6` uses a mutable tag reference; pin it to a full SHA."
+     },
+     "locations": [
+      {
+       "physicalLocation": {
+        "artifactLocation": {
+         "uri": ".github/workflows/pkg-pr-new.yml"
+        },
+        "region": {
+         "startLine": 19
+        }
+       }
+      }
+     ]
+    },
+    {
+     "ruleId": "APN001",
+     "level": "error",
+     "message": {
+      "text": "`actions/setup-node@v6` uses a mutable tag reference; pin it to a full SHA."
+     },
+     "locations": [
+      {
+       "physicalLocation": {
+        "artifactLocation": {
+         "uri": ".github/workflows/pkg-pr-new.yml"
+        },
+        "region": {
+         "startLine": 21
+        }
+       }
+      }
+     ]
+    },
+    {
+     "ruleId": "APN001",
+     "level": "error",
+     "message": {
+      "text": "`actions/checkout@v6` uses a mutable tag reference; pin it to a full SHA."
+     },
+     "locations": [
+      {
+       "physicalLocation": {
+        "artifactLocation": {
+         "uri": ".github/workflows/release.yml"
+        },
+        "region": {
+         "startLine": 29
+        }
+       }
+      }
+     ]
+    },
+    {
+     "ruleId": "APN001",
+     "level": "error",
+     "message": {
+      "text": "`actions/checkout@v6` uses a mutable tag reference; pin it to a full SHA."
+     },
+     "locations": [
+      {
+       "physicalLocation": {
+        "artifactLocation": {
+         "uri": ".github/workflows/release.yml"
+        },
+        "region": {
+         "startLine": 45
+        }
+       }
+      }
+     ]
+    },
+    {
+     "ruleId": "APN001",
+     "level": "error",
+     "message": {
+      "text": "`actions/setup-node@v6` uses a mutable tag reference; pin it to a full SHA."
+     },
+     "locations": [
+      {
+       "physicalLocation": {
+        "artifactLocation": {
+         "uri": ".github/workflows/release.yml"
+        },
+        "region": {
+         "startLine": 47
+        }
+       }
+      }
+     ]
+    },
+    {
+     "ruleId": "APN001",
+     "level": "error",
+     "message": {
+      "text": "`actions/checkout@v6` uses a mutable tag reference; pin it to a full SHA."
+     },
+     "locations": [
+      {
+       "physicalLocation": {
+        "artifactLocation": {
+         "uri": ".github/workflows/release.yml"
+        },
+        "region": {
+         "startLine": 69
+        }
+       }
+      }
+     ]
+    },
+    {
+     "ruleId": "APN001",
+     "level": "error",
+     "message": {
+      "text": "`actions/checkout@v6` uses a mutable tag reference; pin it to a full SHA."
+     },
+     "locations": [
+      {
+       "physicalLocation": {
+        "artifactLocation": {
+         "uri": ".github/workflows/release.yml"
+        },
+        "region": {
+         "startLine": 109
+        }
+       }
+      }
+     ]
+    },
+    {
+     "ruleId": "APN001",
+     "level": "error",
+     "message": {
+      "text": "`actions/setup-node@v6` uses a mutable tag reference; pin it to a full SHA."
+     },
+     "locations": [
+      {
+       "physicalLocation": {
+        "artifactLocation": {
+         "uri": ".github/workflows/release.yml"
+        },
+        "region": {
+         "startLine": 113
+        }
+       }
+      }
+     ]
+    },
+    {
+     "ruleId": "APN001",
+     "level": "error",
+     "message": {
+      "text": "`actions/checkout@v6` uses a mutable tag reference; pin it to a full SHA."
+     },
+     "locations": [
+      {
+       "physicalLocation": {
+        "artifactLocation": {
+         "uri": ".github/workflows/release.yml"
+        },
+        "region": {
+         "startLine": 163
+        }
+       }
+      }
+     ]
+    },
+    {
+     "ruleId": "APN001",
+     "level": "error",
+     "message": {
+      "text": "`babel/actions/ref-matches-branch@v2` uses a mutable tag reference; pin it to a full SHA."
+     },
+     "locations": [
+      {
+       "physicalLocation": {
+        "artifactLocation": {
+         "uri": ".github/workflows/release.yml"
+        },
+        "region": {
+         "startLine": 169
+        }
+       }
+      }
+     ]
+    },
+    {
+     "ruleId": "APN001",
+     "level": "error",
+     "message": {
+      "text": "`babel/actions/get-release-tags@v2` uses a mutable tag reference; pin it to a full SHA."
+     },
+     "locations": [
+      {
+       "physicalLocation": {
+        "artifactLocation": {
+         "uri": ".github/workflows/release.yml"
+        },
+        "region": {
+         "startLine": 179
+        }
+       }
+      }
+     ]
+    },
+    {
+     "ruleId": "APN001",
+     "level": "error",
+     "message": {
+      "text": "`babel/actions/generate-lerna-changelog@v2` uses a mutable tag reference; pin it to a full SHA."
+     },
+     "locations": [
+      {
+       "physicalLocation": {
+        "artifactLocation": {
+         "uri": ".github/workflows/release.yml"
+        },
+        "region": {
+         "startLine": 185
+        }
+       }
+      }
+     ]
+    },
+    {
+     "ruleId": "APN001",
+     "level": "error",
+     "message": {
+      "text": "`babel/actions/publish-github-release@v2` uses a mutable tag reference; pin it to a full SHA."
+     },
+     "locations": [
+      {
+       "physicalLocation": {
+        "artifactLocation": {
+         "uri": ".github/workflows/release.yml"
+        },
+        "region": {
+         "startLine": 194
+        }
+       }
+      }
+     ]
+    },
+    {
+     "ruleId": "APN001",
+     "level": "error",
+     "message": {
+      "text": "`actions/checkout@v6` uses a mutable tag reference; pin it to a full SHA."
+     },
+     "locations": [
+      {
+       "physicalLocation": {
+        "artifactLocation": {
+         "uri": ".github/workflows/release.yml"
+        },
+        "region": {
+         "startLine": 216
+        }
+       }
+      }
+     ]
+    },
+    {
+     "ruleId": "APN001",
+     "level": "error",
+     "message": {
+      "text": "`babel/actions/update-changelog@v2` uses a mutable tag reference; pin it to a full SHA."
+     },
+     "locations": [
+      {
+       "physicalLocation": {
+        "artifactLocation": {
+         "uri": ".github/workflows/release.yml"
+        },
+        "region": {
+         "startLine": 224
+        }
+       }
+      }
+     ]
+    },
+    {
+     "ruleId": "APN001",
+     "level": "error",
+     "message": {
+      "text": "`imjohnbo/issue-bot@v3.4.3` uses a mutable tag reference; pin it to a full SHA."
+     },
+     "locations": [
+      {
+       "physicalLocation": {
+        "artifactLocation": {
+         "uri": ".github/workflows/reminders.yml"
+        },
+        "region": {
+         "startLine": 15
+        }
+       }
+      }
+     ]
+    },
+    {
+     "ruleId": "APN001",
+     "level": "error",
+     "message": {
+      "text": "`actions/checkout@v6` uses a mutable tag reference; pin it to a full SHA."
+     },
+     "locations": [
+      {
+       "physicalLocation": {
+        "artifactLocation": {
+         "uri": ".github/workflows/repl.yml"
+        },
+        "region": {
+         "startLine": 17
+        }
+       }
+      }
+     ]
+    },
+    {
+     "ruleId": "APN001",
+     "level": "error",
+     "message": {
+      "text": "`actions/github-script@v8` uses a mutable tag reference; pin it to a full SHA."
+     },
+     "locations": [
+      {
+       "physicalLocation": {
+        "artifactLocation": {
+         "uri": ".github/workflows/repl.yml"
+        },
+        "region": {
+         "startLine": 18
+        }
+       }
+      }
+     ]
+    },
+    {
+     "ruleId": "APN001",
+     "level": "error",
+     "message": {
+      "text": "`actions/checkout@v6` uses a mutable tag reference; pin it to a full SHA."
+     },
+     "locations": [
+      {
+       "physicalLocation": {
+        "artifactLocation": {
+         "uri": ".github/workflows/update-compat-data.yml"
+        },
+        "region": {
+         "startLine": 17
+        }
+       }
+      }
+     ]
+    },
+    {
+     "ruleId": "APN001",
+     "level": "error",
+     "message": {
+      "text": "`actions/checkout@v6` uses a mutable tag reference; pin it to a full SHA."
+     },
+     "locations": [
+      {
+       "physicalLocation": {
+        "artifactLocation": {
+         "uri": ".github/workflows/update-compat-data.yml"
+        },
+        "region": {
+         "startLine": 18
+        }
+       }
+      }
+     ]
+    },
+    {
+     "ruleId": "APN001",
+     "level": "error",
+     "message": {
+      "text": "`actions/setup-node@v6` uses a mutable tag reference; pin it to a full SHA."
+     },
+     "locations": [
+      {
+       "physicalLocation": {
+        "artifactLocation": {
+         "uri": ".github/workflows/update-compat-data.yml"
+        },
+        "region": {
+         "startLine": 23
+        }
+       }
+      }
+     ]
+    },
+    {
+     "ruleId": "APN001",
+     "level": "error",
+     "message": {
+      "text": "`babel/actions/create-pull-request@v2` uses a mutable tag reference; pin it to a full SHA."
+     },
+     "locations": [
+      {
+       "physicalLocation": {
+        "artifactLocation": {
+         "uri": ".github/workflows/update-compat-data.yml"
+        },
+        "region": {
+         "startLine": 73
+        }
+       }
+      }
+     ]
+    },
+    {
+     "ruleId": "APN001",
+     "level": "error",
+     "message": {
+      "text": "`actions/checkout@v6` uses a mutable tag reference; pin it to a full SHA."
+     },
+     "locations": [
+      {
+       "physicalLocation": {
+        "artifactLocation": {
+         "uri": ".github/workflows/update-parser-tests.yml"
+        },
+        "region": {
+         "startLine": 20
+        }
+       }
+      }
+     ]
+    },
+    {
+     "ruleId": "APN001",
+     "level": "error",
+     "message": {
+      "text": "`actions/checkout@v6` uses a mutable tag reference; pin it to a full SHA."
+     },
+     "locations": [
+      {
+       "physicalLocation": {
+        "artifactLocation": {
+         "uri": ".github/workflows/update-parser-tests.yml"
+        },
+        "region": {
+         "startLine": 21
+        }
+       }
+      }
+     ]
+    },
+    {
+     "ruleId": "APN001",
+     "level": "error",
+     "message": {
+      "text": "`actions/setup-node@v6` uses a mutable tag reference; pin it to a full SHA."
+     },
+     "locations": [
+      {
+       "physicalLocation": {
+        "artifactLocation": {
+         "uri": ".github/workflows/update-parser-tests.yml"
+        },
+        "region": {
+         "startLine": 26
+        }
+       }
+      }
+     ]
+    },
+    {
+     "ruleId": "APN001",
+     "level": "error",
+     "message": {
+      "text": "`babel/actions/create-pull-request@v2` uses a mutable tag reference; pin it to a full SHA."
+     },
+     "locations": [
+      {
+       "physicalLocation": {
+        "artifactLocation": {
+         "uri": ".github/workflows/update-parser-tests.yml"
+        },
+        "region": {
+         "startLine": 51
+        }
+       }
+      }
+     ]
+    },
+    {
+     "ruleId": "APN001",
+     "level": "error",
+     "message": {
+      "text": "`actions/github-script@v6` uses a mutable tag reference; pin it to a full SHA."
+     },
+     "locations": [
+      {
+       "physicalLocation": {
+        "artifactLocation": {
+         "uri": ".github/workflows/update-windows-fixtures.yml"
+        },
+        "region": {
+         "startLine": 21
+        }
+       }
+      }
+     ]
+    },
+    {
+     "ruleId": "APN001",
+     "level": "error",
+     "message": {
+      "text": "`actions/checkout@v6` uses a mutable tag reference; pin it to a full SHA."
+     },
+     "locations": [
+      {
+       "physicalLocation": {
+        "artifactLocation": {
+         "uri": ".github/workflows/update-windows-fixtures.yml"
+        },
+        "region": {
+         "startLine": 43
+        }
+       }
+      }
+     ]
+    },
+    {
+     "ruleId": "APN001",
+     "level": "error",
+     "message": {
+      "text": "`actions/setup-node@v6` uses a mutable tag reference; pin it to a full SHA."
+     },
+     "locations": [
+      {
+       "physicalLocation": {
+        "artifactLocation": {
+         "uri": ".github/workflows/update-windows-fixtures.yml"
+        },
+        "region": {
+         "startLine": 51
+        }
+       }
+      }
+     ]
+    }
+   ]
+  }
+ ]
+}

@@ -1,0 +1,1731 @@
+{
+ "$schema": "https://json.schemastore.org/sarif-2.1.0.json",
+ "version": "2.1.0",
+ "runs": [
+  {
+   "tool": {
+    "driver": {
+     "name": "actpin",
+     "version": "0.1.0",
+     "informationUri": "https://github.com/",
+     "rules": [
+      {
+       "id": "APN001",
+       "name": "unpinned-direct",
+       "shortDescription": {
+        "text": "Action reference in this repository is not pinned to a full commit SHA"
+       },
+       "defaultConfiguration": {
+        "level": "error"
+       }
+      },
+      {
+       "id": "APN002",
+       "name": "unpinned-transitive",
+       "shortDescription": {
+        "text": "A pinned action or reusable workflow pulls in an unpinned action"
+       },
+       "defaultConfiguration": {
+        "level": "error"
+       }
+      },
+      {
+       "id": "APN003",
+       "name": "impostor-commit",
+       "shortDescription": {
+        "text": "Pinned SHA is not reachable from any branch or tag of the upstream repository"
+       },
+       "defaultConfiguration": {
+        "level": "error"
+       }
+      },
+      {
+       "id": "APN004",
+       "name": "tag-moved",
+       "shortDescription": {
+        "text": "A referenced tag now points at a different commit"
+       },
+       "defaultConfiguration": {
+        "level": "warning"
+       }
+      }
+     ]
+    }
+   },
+   "results": [
+    {
+     "ruleId": "APN001",
+     "level": "error",
+     "message": {
+      "text": "`slsa-framework/slsa-github-generator/actions/delegator/setup-generic@main` uses a mutable branch reference; pin it to a full SHA."
+     },
+     "locations": [
+      {
+       "physicalLocation": {
+        "artifactLocation": {
+         "uri": ".github/workflows/builder_bazel_slsa3.yml"
+        },
+        "region": {
+         "startLine": 89
+        }
+       }
+      }
+     ]
+    },
+    {
+     "ruleId": "APN001",
+     "level": "error",
+     "message": {
+      "text": "`slsa-framework/slsa-github-generator/.github/workflows/delegator_lowperms-generic_slsa3.yml@main` uses a mutable branch reference; pin it to a full SHA."
+     },
+     "locations": [
+      {
+       "physicalLocation": {
+        "artifactLocation": {
+         "uri": ".github/workflows/builder_bazel_slsa3.yml"
+        },
+        "region": {
+         "startLine": 103
+        }
+       }
+      }
+     ]
+    },
+    {
+     "ruleId": "APN001",
+     "level": "error",
+     "message": {
+      "text": "`slsa-framework/slsa-github-generator/.github/actions/rng@main` uses a mutable branch reference; pin it to a full SHA."
+     },
+     "locations": [
+      {
+       "physicalLocation": {
+        "artifactLocation": {
+         "uri": ".github/workflows/builder_container-based_slsa3.yml"
+        },
+        "region": {
+         "startLine": 168
+        }
+       }
+      }
+     ]
+    },
+    {
+     "ruleId": "APN001",
+     "level": "error",
+     "message": {
+      "text": "`slsa-framework/slsa-github-generator/.github/actions/detect-workflow-js@main` uses a mutable branch reference; pin it to a full SHA."
+     },
+     "locations": [
+      {
+       "physicalLocation": {
+        "artifactLocation": {
+         "uri": ".github/workflows/builder_container-based_slsa3.yml"
+        },
+        "region": {
+         "startLine": 183
+        }
+       }
+      }
+     ]
+    },
+    {
+     "ruleId": "APN001",
+     "level": "error",
+     "message": {
+      "text": "`slsa-framework/slsa-github-generator/.github/actions/generate-builder@main` uses a mutable branch reference; pin it to a full SHA."
+     },
+     "locations": [
+      {
+       "physicalLocation": {
+        "artifactLocation": {
+         "uri": ".github/workflows/builder_container-based_slsa3.yml"
+        },
+        "region": {
+         "startLine": 200
+        }
+       }
+      }
+     ]
+    },
+    {
+     "ruleId": "APN001",
+     "level": "error",
+     "message": {
+      "text": "`slsa-framework/slsa-github-generator/.github/actions/secure-builder-checkout@main` uses a mutable branch reference; pin it to a full SHA."
+     },
+     "locations": [
+      {
+       "physicalLocation": {
+        "artifactLocation": {
+         "uri": ".github/workflows/builder_container-based_slsa3.yml"
+        },
+        "region": {
+         "startLine": 233
+        }
+       }
+      }
+     ]
+    },
+    {
+     "ruleId": "APN001",
+     "level": "error",
+     "message": {
+      "text": "`slsa-framework/slsa-github-generator/.github/actions/secure-builder-checkout@main` uses a mutable branch reference; pin it to a full SHA."
+     },
+     "locations": [
+      {
+       "physicalLocation": {
+        "artifactLocation": {
+         "uri": ".github/workflows/builder_container-based_slsa3.yml"
+        },
+        "region": {
+         "startLine": 360
+        }
+       }
+      }
+     ]
+    },
+    {
+     "ruleId": "APN001",
+     "level": "error",
+     "message": {
+      "text": "`slsa-framework/slsa-github-generator/.github/actions/secure-builder-checkout@main` uses a mutable branch reference; pin it to a full SHA."
+     },
+     "locations": [
+      {
+       "physicalLocation": {
+        "artifactLocation": {
+         "uri": ".github/workflows/builder_container-based_slsa3.yml"
+        },
+        "region": {
+         "startLine": 488
+        }
+       }
+      }
+     ]
+    },
+    {
+     "ruleId": "APN001",
+     "level": "error",
+     "message": {
+      "text": "`slsa-framework/slsa-github-generator/.github/actions/secure-builder-checkout@main` uses a mutable branch reference; pin it to a full SHA."
+     },
+     "locations": [
+      {
+       "physicalLocation": {
+        "artifactLocation": {
+         "uri": ".github/workflows/builder_container-based_slsa3.yml"
+        },
+        "region": {
+         "startLine": 578
+        }
+       }
+      }
+     ]
+    },
+    {
+     "ruleId": "APN001",
+     "level": "error",
+     "message": {
+      "text": "`slsa-framework/slsa-github-generator/.github/actions/rng@main` uses a mutable branch reference; pin it to a full SHA."
+     },
+     "locations": [
+      {
+       "physicalLocation": {
+        "artifactLocation": {
+         "uri": ".github/workflows/builder_go_slsa3.yml"
+        },
+        "region": {
+         "startLine": 133
+        }
+       }
+      }
+     ]
+    },
+    {
+     "ruleId": "APN001",
+     "level": "error",
+     "message": {
+      "text": "`slsa-framework/slsa-github-generator/.github/actions/detect-workflow-js@main` uses a mutable branch reference; pin it to a full SHA."
+     },
+     "locations": [
+      {
+       "physicalLocation": {
+        "artifactLocation": {
+         "uri": ".github/workflows/builder_go_slsa3.yml"
+        },
+        "region": {
+         "startLine": 145
+        }
+       }
+      }
+     ]
+    },
+    {
+     "ruleId": "APN001",
+     "level": "error",
+     "message": {
+      "text": "`slsa-framework/slsa-github-generator/.github/actions/generate-builder@main` uses a mutable branch reference; pin it to a full SHA."
+     },
+     "locations": [
+      {
+       "physicalLocation": {
+        "artifactLocation": {
+         "uri": ".github/workflows/builder_go_slsa3.yml"
+        },
+        "region": {
+         "startLine": 160
+        }
+       }
+      }
+     ]
+    },
+    {
+     "ruleId": "APN001",
+     "level": "error",
+     "message": {
+      "text": "`slsa-framework/slsa-github-generator/.github/actions/secure-builder-checkout@main` uses a mutable branch reference; pin it to a full SHA."
+     },
+     "locations": [
+      {
+       "physicalLocation": {
+        "artifactLocation": {
+         "uri": ".github/workflows/builder_go_slsa3.yml"
+        },
+        "region": {
+         "startLine": 194
+        }
+       }
+      }
+     ]
+    },
+    {
+     "ruleId": "APN001",
+     "level": "error",
+     "message": {
+      "text": "`slsa-framework/slsa-github-generator/.github/actions/secure-builder-checkout@main` uses a mutable branch reference; pin it to a full SHA."
+     },
+     "locations": [
+      {
+       "physicalLocation": {
+        "artifactLocation": {
+         "uri": ".github/workflows/builder_go_slsa3.yml"
+        },
+        "region": {
+         "startLine": 241
+        }
+       }
+      }
+     ]
+    },
+    {
+     "ruleId": "APN001",
+     "level": "error",
+     "message": {
+      "text": "`slsa-framework/slsa-github-generator/.github/actions/secure-builder-checkout@main` uses a mutable branch reference; pin it to a full SHA."
+     },
+     "locations": [
+      {
+       "physicalLocation": {
+        "artifactLocation": {
+         "uri": ".github/workflows/builder_go_slsa3.yml"
+        },
+        "region": {
+         "startLine": 323
+        }
+       }
+      }
+     ]
+    },
+    {
+     "ruleId": "APN001",
+     "level": "error",
+     "message": {
+      "text": "`slsa-framework/slsa-github-generator/.github/actions/secure-builder-checkout@main` uses a mutable branch reference; pin it to a full SHA."
+     },
+     "locations": [
+      {
+       "physicalLocation": {
+        "artifactLocation": {
+         "uri": ".github/workflows/builder_go_slsa3.yml"
+        },
+        "region": {
+         "startLine": 381
+        }
+       }
+      }
+     ]
+    },
+    {
+     "ruleId": "APN001",
+     "level": "error",
+     "message": {
+      "text": "`slsa-framework/slsa-github-generator/actions/delegator/setup-generic@main` uses a mutable branch reference; pin it to a full SHA."
+     },
+     "locations": [
+      {
+       "physicalLocation": {
+        "artifactLocation": {
+         "uri": ".github/workflows/builder_gradle_slsa3.yml"
+        },
+        "region": {
+         "startLine": 74
+        }
+       }
+      }
+     ]
+    },
+    {
+     "ruleId": "APN001",
+     "level": "error",
+     "message": {
+      "text": "`slsa-framework/slsa-github-generator/.github/workflows/delegator_lowperms-generic_slsa3.yml@main` uses a mutable branch reference; pin it to a full SHA."
+     },
+     "locations": [
+      {
+       "physicalLocation": {
+        "artifactLocation": {
+         "uri": ".github/workflows/builder_gradle_slsa3.yml"
+        },
+        "region": {
+         "startLine": 88
+        }
+       }
+      }
+     ]
+    },
+    {
+     "ruleId": "APN001",
+     "level": "error",
+     "message": {
+      "text": "`slsa-framework/slsa-github-generator/actions/delegator/setup-generic@main` uses a mutable branch reference; pin it to a full SHA."
+     },
+     "locations": [
+      {
+       "physicalLocation": {
+        "artifactLocation": {
+         "uri": ".github/workflows/builder_maven_slsa3.yml"
+        },
+        "region": {
+         "startLine": 70
+        }
+       }
+      }
+     ]
+    },
+    {
+     "ruleId": "APN001",
+     "level": "error",
+     "message": {
+      "text": "`slsa-framework/slsa-github-generator/.github/workflows/delegator_lowperms-generic_slsa3.yml@main` uses a mutable branch reference; pin it to a full SHA."
+     },
+     "locations": [
+      {
+       "physicalLocation": {
+        "artifactLocation": {
+         "uri": ".github/workflows/builder_maven_slsa3.yml"
+        },
+        "region": {
+         "startLine": 84
+        }
+       }
+      }
+     ]
+    },
+    {
+     "ruleId": "APN001",
+     "level": "error",
+     "message": {
+      "text": "`slsa-framework/slsa-github-generator/actions/delegator/setup-generic@main` uses a mutable branch reference; pin it to a full SHA."
+     },
+     "locations": [
+      {
+       "physicalLocation": {
+        "artifactLocation": {
+         "uri": ".github/workflows/builder_nodejs_slsa3.yml"
+        },
+        "region": {
+         "startLine": 92
+        }
+       }
+      }
+     ]
+    },
+    {
+     "ruleId": "APN001",
+     "level": "error",
+     "message": {
+      "text": "`slsa-framework/slsa-github-generator/.github/workflows/delegator_lowperms-generic_slsa3.yml@main` uses a mutable branch reference; pin it to a full SHA."
+     },
+     "locations": [
+      {
+       "physicalLocation": {
+        "artifactLocation": {
+         "uri": ".github/workflows/builder_nodejs_slsa3.yml"
+        },
+        "region": {
+         "startLine": 107
+        }
+       }
+      }
+     ]
+    },
+    {
+     "ruleId": "APN001",
+     "level": "error",
+     "message": {
+      "text": "`slsa-framework/slsa-github-generator/.github/actions/rng@main` uses a mutable branch reference; pin it to a full SHA."
+     },
+     "locations": [
+      {
+       "physicalLocation": {
+        "artifactLocation": {
+         "uri": ".github/workflows/delegator_generic_slsa3.yml"
+        },
+        "region": {
+         "startLine": 87
+        }
+       }
+      }
+     ]
+    },
+    {
+     "ruleId": "APN001",
+     "level": "error",
+     "message": {
+      "text": "`slsa-framework/slsa-github-generator/.github/actions/verify-token@main` uses a mutable branch reference; pin it to a full SHA."
+     },
+     "locations": [
+      {
+       "physicalLocation": {
+        "artifactLocation": {
+         "uri": ".github/workflows/delegator_generic_slsa3.yml"
+        },
+        "region": {
+         "startLine": 103
+        }
+       }
+      }
+     ]
+    },
+    {
+     "ruleId": "APN001",
+     "level": "error",
+     "message": {
+      "text": "`slsa-framework/slsa-github-generator/.github/actions/secure-upload-artifact@main` uses a mutable branch reference; pin it to a full SHA."
+     },
+     "locations": [
+      {
+       "physicalLocation": {
+        "artifactLocation": {
+         "uri": ".github/workflows/delegator_generic_slsa3.yml"
+        },
+        "region": {
+         "startLine": 112
+        }
+       }
+      }
+     ]
+    },
+    {
+     "ruleId": "APN001",
+     "level": "error",
+     "message": {
+      "text": "`slsa-framework/slsa-github-generator/.github/actions/privacy-check@main` uses a mutable branch reference; pin it to a full SHA."
+     },
+     "locations": [
+      {
+       "physicalLocation": {
+        "artifactLocation": {
+         "uri": ".github/workflows/delegator_generic_slsa3.yml"
+        },
+        "region": {
+         "startLine": 123
+        }
+       }
+      }
+     ]
+    },
+    {
+     "ruleId": "APN001",
+     "level": "error",
+     "message": {
+      "text": "`slsa-framework/slsa-github-generator/.github/actions/secure-builder-checkout@main` uses a mutable branch reference; pin it to a full SHA."
+     },
+     "locations": [
+      {
+       "physicalLocation": {
+        "artifactLocation": {
+         "uri": ".github/workflows/delegator_generic_slsa3.yml"
+        },
+        "region": {
+         "startLine": 150
+        }
+       }
+      }
+     ]
+    },
+    {
+     "ruleId": "APN001",
+     "level": "error",
+     "message": {
+      "text": "`slsa-framework/slsa-github-generator/.github/actions/secure-project-checkout@main` uses a mutable branch reference; pin it to a full SHA."
+     },
+     "locations": [
+      {
+       "physicalLocation": {
+        "artifactLocation": {
+         "uri": ".github/workflows/delegator_generic_slsa3.yml"
+        },
+        "region": {
+         "startLine": 174
+        }
+       }
+      }
+     ]
+    },
+    {
+     "ruleId": "APN001",
+     "level": "error",
+     "message": {
+      "text": "`slsa-framework/slsa-github-generator/.github/actions/secure-upload-artifact@main` uses a mutable branch reference; pin it to a full SHA."
+     },
+     "locations": [
+      {
+       "physicalLocation": {
+        "artifactLocation": {
+         "uri": ".github/workflows/delegator_generic_slsa3.yml"
+        },
+        "region": {
+         "startLine": 216
+        }
+       }
+      }
+     ]
+    },
+    {
+     "ruleId": "APN001",
+     "level": "error",
+     "message": {
+      "text": "`slsa-framework/slsa-github-generator/.github/actions/secure-download-artifact@main` uses a mutable branch reference; pin it to a full SHA."
+     },
+     "locations": [
+      {
+       "physicalLocation": {
+        "artifactLocation": {
+         "uri": ".github/workflows/delegator_generic_slsa3.yml"
+        },
+        "region": {
+         "startLine": 232
+        }
+       }
+      }
+     ]
+    },
+    {
+     "ruleId": "APN001",
+     "level": "error",
+     "message": {
+      "text": "`slsa-framework/slsa-github-generator/.github/actions/secure-download-artifact@main` uses a mutable branch reference; pin it to a full SHA."
+     },
+     "locations": [
+      {
+       "physicalLocation": {
+        "artifactLocation": {
+         "uri": ".github/workflows/delegator_generic_slsa3.yml"
+        },
+        "region": {
+         "startLine": 239
+        }
+       }
+      }
+     ]
+    },
+    {
+     "ruleId": "APN001",
+     "level": "error",
+     "message": {
+      "text": "`slsa-framework/slsa-github-generator/.github/actions/generate-attestations@main` uses a mutable branch reference; pin it to a full SHA."
+     },
+     "locations": [
+      {
+       "physicalLocation": {
+        "artifactLocation": {
+         "uri": ".github/workflows/delegator_generic_slsa3.yml"
+        },
+        "region": {
+         "startLine": 269
+        }
+       }
+      }
+     ]
+    },
+    {
+     "ruleId": "APN001",
+     "level": "error",
+     "message": {
+      "text": "`slsa-framework/slsa-github-generator/.github/actions/sign-attestations@main` uses a mutable branch reference; pin it to a full SHA."
+     },
+     "locations": [
+      {
+       "physicalLocation": {
+        "artifactLocation": {
+         "uri": ".github/workflows/delegator_generic_slsa3.yml"
+        },
+        "region": {
+         "startLine": 278
+        }
+       }
+      }
+     ]
+    },
+    {
+     "ruleId": "APN001",
+     "level": "error",
+     "message": {
+      "text": "`slsa-framework/slsa-github-generator/.github/actions/secure-upload-folder@main` uses a mutable branch reference; pin it to a full SHA."
+     },
+     "locations": [
+      {
+       "physicalLocation": {
+        "artifactLocation": {
+         "uri": ".github/workflows/delegator_generic_slsa3.yml"
+        },
+        "region": {
+         "startLine": 285
+        }
+       }
+      }
+     ]
+    },
+    {
+     "ruleId": "APN001",
+     "level": "error",
+     "message": {
+      "text": "`slsa-framework/slsa-github-generator/.github/actions/rng@main` uses a mutable branch reference; pin it to a full SHA."
+     },
+     "locations": [
+      {
+       "physicalLocation": {
+        "artifactLocation": {
+         "uri": ".github/workflows/delegator_lowperms-generic_slsa3.yml"
+        },
+        "region": {
+         "startLine": 92
+        }
+       }
+      }
+     ]
+    },
+    {
+     "ruleId": "APN001",
+     "level": "error",
+     "message": {
+      "text": "`slsa-framework/slsa-github-generator/.github/actions/verify-token@main` uses a mutable branch reference; pin it to a full SHA."
+     },
+     "locations": [
+      {
+       "physicalLocation": {
+        "artifactLocation": {
+         "uri": ".github/workflows/delegator_lowperms-generic_slsa3.yml"
+        },
+        "region": {
+         "startLine": 108
+        }
+       }
+      }
+     ]
+    },
+    {
+     "ruleId": "APN001",
+     "level": "error",
+     "message": {
+      "text": "`slsa-framework/slsa-github-generator/.github/actions/secure-upload-artifact@main` uses a mutable branch reference; pin it to a full SHA."
+     },
+     "locations": [
+      {
+       "physicalLocation": {
+        "artifactLocation": {
+         "uri": ".github/workflows/delegator_lowperms-generic_slsa3.yml"
+        },
+        "region": {
+         "startLine": 117
+        }
+       }
+      }
+     ]
+    },
+    {
+     "ruleId": "APN001",
+     "level": "error",
+     "message": {
+      "text": "`slsa-framework/slsa-github-generator/.github/actions/privacy-check@main` uses a mutable branch reference; pin it to a full SHA."
+     },
+     "locations": [
+      {
+       "physicalLocation": {
+        "artifactLocation": {
+         "uri": ".github/workflows/delegator_lowperms-generic_slsa3.yml"
+        },
+        "region": {
+         "startLine": 128
+        }
+       }
+      }
+     ]
+    },
+    {
+     "ruleId": "APN001",
+     "level": "error",
+     "message": {
+      "text": "`slsa-framework/slsa-github-generator/.github/actions/secure-builder-checkout@main` uses a mutable branch reference; pin it to a full SHA."
+     },
+     "locations": [
+      {
+       "physicalLocation": {
+        "artifactLocation": {
+         "uri": ".github/workflows/delegator_lowperms-generic_slsa3.yml"
+        },
+        "region": {
+         "startLine": 153
+        }
+       }
+      }
+     ]
+    },
+    {
+     "ruleId": "APN001",
+     "level": "error",
+     "message": {
+      "text": "`slsa-framework/slsa-github-generator/.github/actions/secure-project-checkout@main` uses a mutable branch reference; pin it to a full SHA."
+     },
+     "locations": [
+      {
+       "physicalLocation": {
+        "artifactLocation": {
+         "uri": ".github/workflows/delegator_lowperms-generic_slsa3.yml"
+        },
+        "region": {
+         "startLine": 177
+        }
+       }
+      }
+     ]
+    },
+    {
+     "ruleId": "APN001",
+     "level": "error",
+     "message": {
+      "text": "`slsa-framework/slsa-github-generator/.github/actions/secure-upload-artifact@main` uses a mutable branch reference; pin it to a full SHA."
+     },
+     "locations": [
+      {
+       "physicalLocation": {
+        "artifactLocation": {
+         "uri": ".github/workflows/delegator_lowperms-generic_slsa3.yml"
+        },
+        "region": {
+         "startLine": 219
+        }
+       }
+      }
+     ]
+    },
+    {
+     "ruleId": "APN001",
+     "level": "error",
+     "message": {
+      "text": "`slsa-framework/slsa-github-generator/.github/actions/secure-download-artifact@main` uses a mutable branch reference; pin it to a full SHA."
+     },
+     "locations": [
+      {
+       "physicalLocation": {
+        "artifactLocation": {
+         "uri": ".github/workflows/delegator_lowperms-generic_slsa3.yml"
+        },
+        "region": {
+         "startLine": 235
+        }
+       }
+      }
+     ]
+    },
+    {
+     "ruleId": "APN001",
+     "level": "error",
+     "message": {
+      "text": "`slsa-framework/slsa-github-generator/.github/actions/secure-download-artifact@main` uses a mutable branch reference; pin it to a full SHA."
+     },
+     "locations": [
+      {
+       "physicalLocation": {
+        "artifactLocation": {
+         "uri": ".github/workflows/delegator_lowperms-generic_slsa3.yml"
+        },
+        "region": {
+         "startLine": 242
+        }
+       }
+      }
+     ]
+    },
+    {
+     "ruleId": "APN001",
+     "level": "error",
+     "message": {
+      "text": "`slsa-framework/slsa-github-generator/.github/actions/generate-attestations@main` uses a mutable branch reference; pin it to a full SHA."
+     },
+     "locations": [
+      {
+       "physicalLocation": {
+        "artifactLocation": {
+         "uri": ".github/workflows/delegator_lowperms-generic_slsa3.yml"
+        },
+        "region": {
+         "startLine": 272
+        }
+       }
+      }
+     ]
+    },
+    {
+     "ruleId": "APN001",
+     "level": "error",
+     "message": {
+      "text": "`slsa-framework/slsa-github-generator/.github/actions/sign-attestations@main` uses a mutable branch reference; pin it to a full SHA."
+     },
+     "locations": [
+      {
+       "physicalLocation": {
+        "artifactLocation": {
+         "uri": ".github/workflows/delegator_lowperms-generic_slsa3.yml"
+        },
+        "region": {
+         "startLine": 281
+        }
+       }
+      }
+     ]
+    },
+    {
+     "ruleId": "APN001",
+     "level": "error",
+     "message": {
+      "text": "`slsa-framework/slsa-github-generator/.github/actions/secure-upload-folder@main` uses a mutable branch reference; pin it to a full SHA."
+     },
+     "locations": [
+      {
+       "physicalLocation": {
+        "artifactLocation": {
+         "uri": ".github/workflows/delegator_lowperms-generic_slsa3.yml"
+        },
+        "region": {
+         "startLine": 288
+        }
+       }
+      }
+     ]
+    },
+    {
+     "ruleId": "APN001",
+     "level": "error",
+     "message": {
+      "text": "`slsa-framework/slsa-github-generator/.github/actions/detect-workflow-js@main` uses a mutable branch reference; pin it to a full SHA."
+     },
+     "locations": [
+      {
+       "physicalLocation": {
+        "artifactLocation": {
+         "uri": ".github/workflows/e2e.create-container_based-predicate.schedule.yml"
+        },
+        "region": {
+         "startLine": 45
+        }
+       }
+      }
+     ]
+    },
+    {
+     "ruleId": "APN001",
+     "level": "error",
+     "message": {
+      "text": "`slsa-framework/slsa-github-generator/.github/actions/detect-workflow-js@main` uses a mutable branch reference; pin it to a full SHA."
+     },
+     "locations": [
+      {
+       "physicalLocation": {
+        "artifactLocation": {
+         "uri": ".github/workflows/generator_container_slsa3.yml"
+        },
+        "region": {
+         "startLine": 115
+        }
+       }
+      }
+     ]
+    },
+    {
+     "ruleId": "APN001",
+     "level": "error",
+     "message": {
+      "text": "`slsa-framework/slsa-github-generator/.github/actions/generate-builder@main` uses a mutable branch reference; pin it to a full SHA."
+     },
+     "locations": [
+      {
+       "physicalLocation": {
+        "artifactLocation": {
+         "uri": ".github/workflows/generator_container_slsa3.yml"
+        },
+        "region": {
+         "startLine": 147
+        }
+       }
+      }
+     ]
+    },
+    {
+     "ruleId": "APN001",
+     "level": "error",
+     "message": {
+      "text": "`slsa-framework/slsa-github-generator/.github/actions/detect-workflow-js@main` uses a mutable branch reference; pin it to a full SHA."
+     },
+     "locations": [
+      {
+       "physicalLocation": {
+        "artifactLocation": {
+         "uri": ".github/workflows/generator_generic_slsa3.yml"
+        },
+        "region": {
+         "startLine": 124
+        }
+       }
+      }
+     ]
+    },
+    {
+     "ruleId": "APN001",
+     "level": "error",
+     "message": {
+      "text": "`slsa-framework/slsa-github-generator/.github/actions/generate-builder@main` uses a mutable branch reference; pin it to a full SHA."
+     },
+     "locations": [
+      {
+       "physicalLocation": {
+        "artifactLocation": {
+         "uri": ".github/workflows/generator_generic_slsa3.yml"
+        },
+        "region": {
+         "startLine": 159
+        }
+       }
+      }
+     ]
+    },
+    {
+     "ruleId": "APN001",
+     "level": "error",
+     "message": {
+      "text": "`slsa-framework/slsa-github-generator/.github/actions/secure-download-artifact@main` uses a mutable branch reference; pin it to a full SHA."
+     },
+     "locations": [
+      {
+       "physicalLocation": {
+        "artifactLocation": {
+         "uri": ".github/workflows/generator_generic_slsa3.yml"
+        },
+        "region": {
+         "startLine": 192
+        }
+       }
+      }
+     ]
+    },
+    {
+     "ruleId": "APN001",
+     "level": "error",
+     "message": {
+      "text": "`slsa-framework/slsa-github-generator/.github/actions/secure-builder-checkout@main` uses a mutable branch reference; pin it to a full SHA."
+     },
+     "locations": [
+      {
+       "physicalLocation": {
+        "artifactLocation": {
+         "uri": ".github/workflows/generator_generic_slsa3.yml"
+        },
+        "region": {
+         "startLine": 272
+        }
+       }
+      }
+     ]
+    },
+    {
+     "ruleId": "APN001",
+     "level": "error",
+     "message": {
+      "text": "`slsa-framework/slsa-github-generator/.github/workflows/builder_maven_slsa3.yml@main` uses a mutable branch reference; pin it to a full SHA."
+     },
+     "locations": [
+      {
+       "physicalLocation": {
+        "artifactLocation": {
+         "uri": ".github/workflows/pre-submit.e2e.maven.yml"
+        },
+        "region": {
+         "startLine": 33
+        }
+       }
+      }
+     ]
+    },
+    {
+     "ruleId": "APN001",
+     "level": "error",
+     "message": {
+      "text": "`slsa-framework/slsa-github-generator/.github/workflows/builder_go_slsa3.yml@main` uses a mutable branch reference; pin it to a full SHA."
+     },
+     "locations": [
+      {
+       "physicalLocation": {
+        "artifactLocation": {
+         "uri": ".github/workflows/release.yml"
+        },
+        "region": {
+         "startLine": 65
+        }
+       }
+      }
+     ]
+    },
+    {
+     "ruleId": "APN001",
+     "level": "error",
+     "message": {
+      "text": "`slsa-framework/slsa-github-generator/.github/workflows/builder_go_slsa3.yml@main` uses a mutable branch reference; pin it to a full SHA."
+     },
+     "locations": [
+      {
+       "physicalLocation": {
+        "artifactLocation": {
+         "uri": ".github/workflows/release.yml"
+        },
+        "region": {
+         "startLine": 78
+        }
+       }
+      }
+     ]
+    },
+    {
+     "ruleId": "APN001",
+     "level": "error",
+     "message": {
+      "text": "`slsa-framework/slsa-github-generator/.github/workflows/builder_go_slsa3.yml@main` uses a mutable branch reference; pin it to a full SHA."
+     },
+     "locations": [
+      {
+       "physicalLocation": {
+        "artifactLocation": {
+         "uri": ".github/workflows/release.yml"
+        },
+        "region": {
+         "startLine": 91
+        }
+       }
+      }
+     ]
+    },
+    {
+     "ruleId": "APN001",
+     "level": "error",
+     "message": {
+      "text": "`slsa-framework/slsa-github-generator/.github/workflows/builder_go_slsa3.yml@main` uses a mutable branch reference; pin it to a full SHA."
+     },
+     "locations": [
+      {
+       "physicalLocation": {
+        "artifactLocation": {
+         "uri": ".github/workflows/release.yml"
+        },
+        "region": {
+         "startLine": 104
+        }
+       }
+      }
+     ]
+    },
+    {
+     "ruleId": "APN002",
+     "level": "error",
+     "message": {
+      "text": "`slsa-framework/slsa-github-generator/.github/actions/rng@main` (branch) is pulled in transitively via .github/workflows/builder_bazel_slsa3.yml -> slsa-framework/slsa-github-generator/.github/workflows/delegator_lowperms-generic_slsa3.yml@main -> slsa-framework/slsa-github-generator/.github/actions/rng@main. Pinning the direct reference does not pin this action."
+     },
+     "locations": [
+      {
+       "physicalLocation": {
+        "artifactLocation": {
+         "uri": ".github/workflows/builder_bazel_slsa3.yml"
+        },
+        "region": {
+         "startLine": 103
+        }
+       }
+      }
+     ]
+    },
+    {
+     "ruleId": "APN002",
+     "level": "error",
+     "message": {
+      "text": "`slsa-framework/slsa-github-generator/.github/actions/verify-token@main` (branch) is pulled in transitively via .github/workflows/builder_bazel_slsa3.yml -> slsa-framework/slsa-github-generator/.github/workflows/delegator_lowperms-generic_slsa3.yml@main -> slsa-framework/slsa-github-generator/.github/actions/verify-token@main. Pinning the direct reference does not pin this action."
+     },
+     "locations": [
+      {
+       "physicalLocation": {
+        "artifactLocation": {
+         "uri": ".github/workflows/builder_bazel_slsa3.yml"
+        },
+        "region": {
+         "startLine": 103
+        }
+       }
+      }
+     ]
+    },
+    {
+     "ruleId": "APN002",
+     "level": "error",
+     "message": {
+      "text": "`slsa-framework/slsa-github-generator/.github/actions/secure-upload-artifact@main` (branch) is pulled in transitively via .github/workflows/builder_bazel_slsa3.yml -> slsa-framework/slsa-github-generator/.github/workflows/delegator_lowperms-generic_slsa3.yml@main -> slsa-framework/slsa-github-generator/.github/actions/secure-upload-artifact@main. Pinning the direct reference does not pin this action."
+     },
+     "locations": [
+      {
+       "physicalLocation": {
+        "artifactLocation": {
+         "uri": ".github/workflows/builder_bazel_slsa3.yml"
+        },
+        "region": {
+         "startLine": 103
+        }
+       }
+      }
+     ]
+    },
+    {
+     "ruleId": "APN002",
+     "level": "error",
+     "message": {
+      "text": "`slsa-framework/slsa-github-generator/.github/actions/privacy-check@main` (branch) is pulled in transitively via .github/workflows/builder_bazel_slsa3.yml -> slsa-framework/slsa-github-generator/.github/workflows/delegator_lowperms-generic_slsa3.yml@main -> slsa-framework/slsa-github-generator/.github/actions/privacy-check@main. Pinning the direct reference does not pin this action."
+     },
+     "locations": [
+      {
+       "physicalLocation": {
+        "artifactLocation": {
+         "uri": ".github/workflows/builder_bazel_slsa3.yml"
+        },
+        "region": {
+         "startLine": 103
+        }
+       }
+      }
+     ]
+    },
+    {
+     "ruleId": "APN002",
+     "level": "error",
+     "message": {
+      "text": "`slsa-framework/slsa-github-generator/.github/actions/secure-builder-checkout@main` (branch) is pulled in transitively via .github/workflows/builder_bazel_slsa3.yml -> slsa-framework/slsa-github-generator/.github/workflows/delegator_lowperms-generic_slsa3.yml@main -> slsa-framework/slsa-github-generator/.github/actions/secure-builder-checkout@main. Pinning the direct reference does not pin this action."
+     },
+     "locations": [
+      {
+       "physicalLocation": {
+        "artifactLocation": {
+         "uri": ".github/workflows/builder_bazel_slsa3.yml"
+        },
+        "region": {
+         "startLine": 103
+        }
+       }
+      }
+     ]
+    },
+    {
+     "ruleId": "APN002",
+     "level": "error",
+     "message": {
+      "text": "`slsa-framework/slsa-github-generator/.github/actions/secure-project-checkout@main` (branch) is pulled in transitively via .github/workflows/builder_bazel_slsa3.yml -> slsa-framework/slsa-github-generator/.github/workflows/delegator_lowperms-generic_slsa3.yml@main -> slsa-framework/slsa-github-generator/.github/actions/secure-project-checkout@main. Pinning the direct reference does not pin this action."
+     },
+     "locations": [
+      {
+       "physicalLocation": {
+        "artifactLocation": {
+         "uri": ".github/workflows/builder_bazel_slsa3.yml"
+        },
+        "region": {
+         "startLine": 103
+        }
+       }
+      }
+     ]
+    },
+    {
+     "ruleId": "APN002",
+     "level": "error",
+     "message": {
+      "text": "`slsa-framework/slsa-github-generator/.github/actions/secure-upload-artifact@main` (branch) is pulled in transitively via .github/workflows/builder_bazel_slsa3.yml -> slsa-framework/slsa-github-generator/.github/workflows/delegator_lowperms-generic_slsa3.yml@main -> slsa-framework/slsa-github-generator/.github/actions/secure-upload-artifact@main. Pinning the direct reference does not pin this action."
+     },
+     "locations": [
+      {
+       "physicalLocation": {
+        "artifactLocation": {
+         "uri": ".github/workflows/builder_bazel_slsa3.yml"
+        },
+        "region": {
+         "startLine": 103
+        }
+       }
+      }
+     ]
+    },
+    {
+     "ruleId": "APN002",
+     "level": "error",
+     "message": {
+      "text": "`slsa-framework/slsa-github-generator/.github/actions/secure-download-artifact@main` (branch) is pulled in transitively via .github/workflows/builder_bazel_slsa3.yml -> slsa-framework/slsa-github-generator/.github/workflows/delegator_lowperms-generic_slsa3.yml@main -> slsa-framework/slsa-github-generator/.github/actions/secure-download-artifact@main. Pinning the direct reference does not pin this action."
+     },
+     "locations": [
+      {
+       "physicalLocation": {
+        "artifactLocation": {
+         "uri": ".github/workflows/builder_bazel_slsa3.yml"
+        },
+        "region": {
+         "startLine": 103
+        }
+       }
+      }
+     ]
+    },
+    {
+     "ruleId": "APN002",
+     "level": "error",
+     "message": {
+      "text": "`slsa-framework/slsa-github-generator/.github/actions/secure-download-artifact@main` (branch) is pulled in transitively via .github/workflows/builder_bazel_slsa3.yml -> slsa-framework/slsa-github-generator/.github/workflows/delegator_lowperms-generic_slsa3.yml@main -> slsa-framework/slsa-github-generator/.github/actions/secure-download-artifact@main. Pinning the direct reference does not pin this action."
+     },
+     "locations": [
+      {
+       "physicalLocation": {
+        "artifactLocation": {
+         "uri": ".github/workflows/builder_bazel_slsa3.yml"
+        },
+        "region": {
+         "startLine": 103
+        }
+       }
+      }
+     ]
+    },
+    {
+     "ruleId": "APN002",
+     "level": "error",
+     "message": {
+      "text": "`slsa-framework/slsa-github-generator/.github/actions/generate-attestations@main` (branch) is pulled in transitively via .github/workflows/builder_bazel_slsa3.yml -> slsa-framework/slsa-github-generator/.github/workflows/delegator_lowperms-generic_slsa3.yml@main -> slsa-framework/slsa-github-generator/.github/actions/generate-attestations@main. Pinning the direct reference does not pin this action."
+     },
+     "locations": [
+      {
+       "physicalLocation": {
+        "artifactLocation": {
+         "uri": ".github/workflows/builder_bazel_slsa3.yml"
+        },
+        "region": {
+         "startLine": 103
+        }
+       }
+      }
+     ]
+    },
+    {
+     "ruleId": "APN002",
+     "level": "error",
+     "message": {
+      "text": "`slsa-framework/slsa-github-generator/.github/actions/sign-attestations@main` (branch) is pulled in transitively via .github/workflows/builder_bazel_slsa3.yml -> slsa-framework/slsa-github-generator/.github/workflows/delegator_lowperms-generic_slsa3.yml@main -> slsa-framework/slsa-github-generator/.github/actions/sign-attestations@main. Pinning the direct reference does not pin this action."
+     },
+     "locations": [
+      {
+       "physicalLocation": {
+        "artifactLocation": {
+         "uri": ".github/workflows/builder_bazel_slsa3.yml"
+        },
+        "region": {
+         "startLine": 103
+        }
+       }
+      }
+     ]
+    },
+    {
+     "ruleId": "APN002",
+     "level": "error",
+     "message": {
+      "text": "`slsa-framework/slsa-github-generator/.github/actions/secure-upload-folder@main` (branch) is pulled in transitively via .github/workflows/builder_bazel_slsa3.yml -> slsa-framework/slsa-github-generator/.github/workflows/delegator_lowperms-generic_slsa3.yml@main -> slsa-framework/slsa-github-generator/.github/actions/secure-upload-folder@main. Pinning the direct reference does not pin this action."
+     },
+     "locations": [
+      {
+       "physicalLocation": {
+        "artifactLocation": {
+         "uri": ".github/workflows/builder_bazel_slsa3.yml"
+        },
+        "region": {
+         "startLine": 103
+        }
+       }
+      }
+     ]
+    },
+    {
+     "ruleId": "APN002",
+     "level": "error",
+     "message": {
+      "text": "`slsa-framework/slsa-github-generator/.github/actions/secure-builder-checkout@main` (branch) is pulled in transitively via .github/workflows/builder_container-based_slsa3.yml -> slsa-framework/slsa-github-generator/.github/actions/generate-builder@main -> slsa-framework/slsa-github-generator/.github/actions/secure-builder-checkout@main. Pinning the direct reference does not pin this action."
+     },
+     "locations": [
+      {
+       "physicalLocation": {
+        "artifactLocation": {
+         "uri": ".github/workflows/builder_container-based_slsa3.yml"
+        },
+        "region": {
+         "startLine": 200
+        }
+       }
+      }
+     ]
+    },
+    {
+     "ruleId": "APN002",
+     "level": "error",
+     "message": {
+      "text": "`slsa-framework/slsa-github-generator/.github/actions/compute-sha256@main` (branch) is pulled in transitively via .github/workflows/delegator_generic_slsa3.yml -> slsa-framework/slsa-github-generator/.github/actions/secure-upload-artifact@main -> slsa-framework/slsa-github-generator/.github/actions/compute-sha256@main. Pinning the direct reference does not pin this action."
+     },
+     "locations": [
+      {
+       "physicalLocation": {
+        "artifactLocation": {
+         "uri": ".github/workflows/delegator_generic_slsa3.yml"
+        },
+        "region": {
+         "startLine": 112
+        }
+       }
+      }
+     ]
+    },
+    {
+     "ruleId": "APN002",
+     "level": "error",
+     "message": {
+      "text": "`slsa-framework/slsa-github-generator/.github/actions/compute-sha256@main` (branch) is pulled in transitively via .github/workflows/delegator_generic_slsa3.yml -> slsa-framework/slsa-github-generator/.github/actions/secure-download-artifact@main -> slsa-framework/slsa-github-generator/.github/actions/compute-sha256@main. Pinning the direct reference does not pin this action."
+     },
+     "locations": [
+      {
+       "physicalLocation": {
+        "artifactLocation": {
+         "uri": ".github/workflows/delegator_generic_slsa3.yml"
+        },
+        "region": {
+         "startLine": 232
+        }
+       }
+      }
+     ]
+    },
+    {
+     "ruleId": "APN002",
+     "level": "error",
+     "message": {
+      "text": "`slsa-framework/slsa-github-generator/.github/actions/secure-upload-artifact@main` (branch) is pulled in transitively via .github/workflows/delegator_generic_slsa3.yml -> slsa-framework/slsa-github-generator/.github/actions/secure-upload-folder@main -> slsa-framework/slsa-github-generator/.github/actions/secure-upload-artifact@main. Pinning the direct reference does not pin this action."
+     },
+     "locations": [
+      {
+       "physicalLocation": {
+        "artifactLocation": {
+         "uri": ".github/workflows/delegator_generic_slsa3.yml"
+        },
+        "region": {
+         "startLine": 285
+        }
+       }
+      }
+     ]
+    },
+    {
+     "ruleId": "APN001",
+     "level": "error",
+     "message": {
+      "text": "`slsa-framework/slsa-github-generator/.github/actions/secure-upload-artifact@main` uses a mutable branch reference; pin it to a full SHA."
+     },
+     "locations": [
+      {
+       "physicalLocation": {
+        "artifactLocation": {
+         "uri": ".github/workflows/e2e.upload-folder.schedule.yml"
+        },
+        "region": {
+         "startLine": 64
+        }
+       }
+      }
+     ]
+    },
+    {
+     "ruleId": "APN001",
+     "level": "error",
+     "message": {
+      "text": "`slsa-framework/slsa-github-generator/.github/actions/rng@main` uses a mutable branch reference; pin it to a full SHA."
+     },
+     "locations": [
+      {
+       "physicalLocation": {
+        "artifactLocation": {
+         "uri": ".github/workflows/e2e.upload-folder.schedule.yml"
+        },
+        "region": {
+         "startLine": 106
+        }
+       }
+      }
+     ]
+    },
+    {
+     "ruleId": "APN001",
+     "level": "error",
+     "message": {
+      "text": "`slsa-framework/slsa-github-generator/.github/actions/compute-sha256@main` uses a mutable branch reference; pin it to a full SHA."
+     },
+     "locations": [
+      {
+       "physicalLocation": {
+        "artifactLocation": {
+         "uri": ".github/workflows/e2e.upload-folder.schedule.yml"
+        },
+        "region": {
+         "startLine": 106
+        }
+       }
+      }
+     ]
+    },
+    {
+     "ruleId": "APN001",
+     "level": "error",
+     "message": {
+      "text": "`slsa-framework/slsa-github-generator/.github/actions/secure-builder-checkout@main` uses a mutable branch reference; pin it to a full SHA."
+     },
+     "locations": [
+      {
+       "physicalLocation": {
+        "artifactLocation": {
+         "uri": ".github/workflows/pre-submit.actions.yml"
+        },
+        "region": {
+         "startLine": 498
+        }
+       }
+      }
+     ]
+    },
+    {
+     "ruleId": "APN002",
+     "level": "error",
+     "message": {
+      "text": "`slsa-framework/slsa-github-generator/actions/delegator/setup-generic@main` (branch) is pulled in transitively via .github/workflows/pre-submit.e2e.maven.yml -> slsa-framework/slsa-github-generator/.github/workflows/builder_maven_slsa3.yml@main -> slsa-framework/slsa-github-generator/actions/delegator/setup-generic@main. Pinning the direct reference does not pin this action."
+     },
+     "locations": [
+      {
+       "physicalLocation": {
+        "artifactLocation": {
+         "uri": ".github/workflows/pre-submit.e2e.maven.yml"
+        },
+        "region": {
+         "startLine": 33
+        }
+       }
+      }
+     ]
+    },
+    {
+     "ruleId": "APN002",
+     "level": "error",
+     "message": {
+      "text": "`slsa-framework/slsa-github-generator/.github/workflows/delegator_lowperms-generic_slsa3.yml@main` (branch) is pulled in transitively via .github/workflows/pre-submit.e2e.maven.yml -> slsa-framework/slsa-github-generator/.github/workflows/builder_maven_slsa3.yml@main -> slsa-framework/slsa-github-generator/.github/workflows/delegator_lowperms-generic_slsa3.yml@main. Pinning the direct reference does not pin this action."
+     },
+     "locations": [
+      {
+       "physicalLocation": {
+        "artifactLocation": {
+         "uri": ".github/workflows/pre-submit.e2e.maven.yml"
+        },
+        "region": {
+         "startLine": 33
+        }
+       }
+      }
+     ]
+    },
+    {
+     "ruleId": "APN002",
+     "level": "error",
+     "message": {
+      "text": "`slsa-framework/slsa-github-generator/.github/actions/rng@main` (branch) is pulled in transitively via .github/workflows/release.yml -> slsa-framework/slsa-github-generator/.github/workflows/builder_go_slsa3.yml@main -> slsa-framework/slsa-github-generator/.github/actions/rng@main. Pinning the direct reference does not pin this action."
+     },
+     "locations": [
+      {
+       "physicalLocation": {
+        "artifactLocation": {
+         "uri": ".github/workflows/release.yml"
+        },
+        "region": {
+         "startLine": 65
+        }
+       }
+      }
+     ]
+    },
+    {
+     "ruleId": "APN002",
+     "level": "error",
+     "message": {
+      "text": "`slsa-framework/slsa-github-generator/.github/actions/detect-workflow-js@main` (branch) is pulled in transitively via .github/workflows/release.yml -> slsa-framework/slsa-github-generator/.github/workflows/builder_go_slsa3.yml@main -> slsa-framework/slsa-github-generator/.github/actions/detect-workflow-js@main. Pinning the direct reference does not pin this action."
+     },
+     "locations": [
+      {
+       "physicalLocation": {
+        "artifactLocation": {
+         "uri": ".github/workflows/release.yml"
+        },
+        "region": {
+         "startLine": 65
+        }
+       }
+      }
+     ]
+    },
+    {
+     "ruleId": "APN002",
+     "level": "error",
+     "message": {
+      "text": "`slsa-framework/slsa-github-generator/.github/actions/generate-builder@main` (branch) is pulled in transitively via .github/workflows/release.yml -> slsa-framework/slsa-github-generator/.github/workflows/builder_go_slsa3.yml@main -> slsa-framework/slsa-github-generator/.github/actions/generate-builder@main. Pinning the direct reference does not pin this action."
+     },
+     "locations": [
+      {
+       "physicalLocation": {
+        "artifactLocation": {
+         "uri": ".github/workflows/release.yml"
+        },
+        "region": {
+         "startLine": 65
+        }
+       }
+      }
+     ]
+    },
+    {
+     "ruleId": "APN002",
+     "level": "error",
+     "message": {
+      "text": "`slsa-framework/slsa-github-generator/.github/actions/secure-builder-checkout@main` (branch) is pulled in transitively via .github/workflows/release.yml -> slsa-framework/slsa-github-generator/.github/workflows/builder_go_slsa3.yml@main -> slsa-framework/slsa-github-generator/.github/actions/secure-builder-checkout@main. Pinning the direct reference does not pin this action."
+     },
+     "locations": [
+      {
+       "physicalLocation": {
+        "artifactLocation": {
+         "uri": ".github/workflows/release.yml"
+        },
+        "region": {
+         "startLine": 65
+        }
+       }
+      }
+     ]
+    },
+    {
+     "ruleId": "APN002",
+     "level": "error",
+     "message": {
+      "text": "`slsa-framework/slsa-github-generator/.github/actions/secure-builder-checkout@main` (branch) is pulled in transitively via .github/workflows/release.yml -> slsa-framework/slsa-github-generator/.github/workflows/builder_go_slsa3.yml@main -> slsa-framework/slsa-github-generator/.github/actions/secure-builder-checkout@main. Pinning the direct reference does not pin this action."
+     },
+     "locations": [
+      {
+       "physicalLocation": {
+        "artifactLocation": {
+         "uri": ".github/workflows/release.yml"
+        },
+        "region": {
+         "startLine": 65
+        }
+       }
+      }
+     ]
+    },
+    {
+     "ruleId": "APN002",
+     "level": "error",
+     "message": {
+      "text": "`slsa-framework/slsa-github-generator/.github/actions/secure-builder-checkout@main` (branch) is pulled in transitively via .github/workflows/release.yml -> slsa-framework/slsa-github-generator/.github/workflows/builder_go_slsa3.yml@main -> slsa-framework/slsa-github-generator/.github/actions/secure-builder-checkout@main. Pinning the direct reference does not pin this action."
+     },
+     "locations": [
+      {
+       "physicalLocation": {
+        "artifactLocation": {
+         "uri": ".github/workflows/release.yml"
+        },
+        "region": {
+         "startLine": 65
+        }
+       }
+      }
+     ]
+    },
+    {
+     "ruleId": "APN002",
+     "level": "error",
+     "message": {
+      "text": "`slsa-framework/slsa-github-generator/.github/actions/secure-builder-checkout@main` (branch) is pulled in transitively via .github/workflows/release.yml -> slsa-framework/slsa-github-generator/.github/workflows/builder_go_slsa3.yml@main -> slsa-framework/slsa-github-generator/.github/actions/secure-builder-checkout@main. Pinning the direct reference does not pin this action."
+     },
+     "locations": [
+      {
+       "physicalLocation": {
+        "artifactLocation": {
+         "uri": ".github/workflows/release.yml"
+        },
+        "region": {
+         "startLine": 65
+        }
+       }
+      }
+     ]
+    },
+    {
+     "ruleId": "APN002",
+     "level": "error",
+     "message": {
+      "text": "`docker://ghcr.io/ossf/scorecard-action:v2.4.2` (docker-tag) is pulled in transitively via .github/workflows/scorecards.yml -> ossf/scorecard-action@05b42c624433fc40578a4040d5cf5e36ddca8cde -> docker://ghcr.io/ossf/scorecard-action:v2.4.2. Pinning the direct reference does not pin this action."
+     },
+     "locations": [
+      {
+       "physicalLocation": {
+        "artifactLocation": {
+         "uri": ".github/workflows/scorecards.yml"
+        },
+        "region": {
+         "startLine": 47
+        }
+       }
+      }
+     ]
+    }
+   ]
+  }
+ ]
+}

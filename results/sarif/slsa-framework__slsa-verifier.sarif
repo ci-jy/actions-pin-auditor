@@ -1,0 +1,249 @@
+{
+ "$schema": "https://json.schemastore.org/sarif-2.1.0.json",
+ "version": "2.1.0",
+ "runs": [
+  {
+   "tool": {
+    "driver": {
+     "name": "actpin",
+     "version": "0.1.0",
+     "informationUri": "https://github.com/",
+     "rules": [
+      {
+       "id": "APN001",
+       "name": "unpinned-direct",
+       "shortDescription": {
+        "text": "Action reference in this repository is not pinned to a full commit SHA"
+       },
+       "defaultConfiguration": {
+        "level": "error"
+       }
+      },
+      {
+       "id": "APN002",
+       "name": "unpinned-transitive",
+       "shortDescription": {
+        "text": "A pinned action or reusable workflow pulls in an unpinned action"
+       },
+       "defaultConfiguration": {
+        "level": "error"
+       }
+      },
+      {
+       "id": "APN003",
+       "name": "impostor-commit",
+       "shortDescription": {
+        "text": "Pinned SHA is not reachable from any branch or tag of the upstream repository"
+       },
+       "defaultConfiguration": {
+        "level": "error"
+       }
+      },
+      {
+       "id": "APN004",
+       "name": "tag-moved",
+       "shortDescription": {
+        "text": "A referenced tag now points at a different commit"
+       },
+       "defaultConfiguration": {
+        "level": "warning"
+       }
+      }
+     ]
+    }
+   },
+   "results": [
+    {
+     "ruleId": "APN001",
+     "level": "error",
+     "message": {
+      "text": "`slsa-framework/slsa-github-generator/.github/workflows/builder_go_slsa3.yml@v2.0.0` uses a mutable tag reference; pin it to a full SHA."
+     },
+     "locations": [
+      {
+       "physicalLocation": {
+        "artifactLocation": {
+         "uri": ".github/workflows/release.yml"
+        },
+        "region": {
+         "startLine": 52
+        }
+       }
+      }
+     ]
+    },
+    {
+     "ruleId": "APN002",
+     "level": "error",
+     "message": {
+      "text": "`slsa-framework/slsa-github-generator/.github/actions/rng@v2.0.0` (tag) is pulled in transitively via .github/workflows/release.yml -> slsa-framework/slsa-github-generator/.github/workflows/builder_go_slsa3.yml@v2.0.0 -> slsa-framework/slsa-github-generator/.github/actions/rng@v2.0.0. Pinning the direct reference does not pin this action."
+     },
+     "locations": [
+      {
+       "physicalLocation": {
+        "artifactLocation": {
+         "uri": ".github/workflows/release.yml"
+        },
+        "region": {
+         "startLine": 52
+        }
+       }
+      }
+     ]
+    },
+    {
+     "ruleId": "APN002",
+     "level": "error",
+     "message": {
+      "text": "`slsa-framework/slsa-github-generator/.github/actions/detect-workflow-js@v2.0.0` (tag) is pulled in transitively via .github/workflows/release.yml -> slsa-framework/slsa-github-generator/.github/workflows/builder_go_slsa3.yml@v2.0.0 -> slsa-framework/slsa-github-generator/.github/actions/detect-workflow-js@v2.0.0. Pinning the direct reference does not pin this action."
+     },
+     "locations": [
+      {
+       "physicalLocation": {
+        "artifactLocation": {
+         "uri": ".github/workflows/release.yml"
+        },
+        "region": {
+         "startLine": 52
+        }
+       }
+      }
+     ]
+    },
+    {
+     "ruleId": "APN002",
+     "level": "error",
+     "message": {
+      "text": "`slsa-framework/slsa-github-generator/.github/actions/generate-builder@v2.0.0` (tag) is pulled in transitively via .github/workflows/release.yml -> slsa-framework/slsa-github-generator/.github/workflows/builder_go_slsa3.yml@v2.0.0 -> slsa-framework/slsa-github-generator/.github/actions/generate-builder@v2.0.0. Pinning the direct reference does not pin this action."
+     },
+     "locations": [
+      {
+       "physicalLocation": {
+        "artifactLocation": {
+         "uri": ".github/workflows/release.yml"
+        },
+        "region": {
+         "startLine": 52
+        }
+       }
+      }
+     ]
+    },
+    {
+     "ruleId": "APN002",
+     "level": "error",
+     "message": {
+      "text": "`slsa-framework/slsa-github-generator/.github/actions/secure-builder-checkout@v2.0.0` (tag) is pulled in transitively via .github/workflows/release.yml -> slsa-framework/slsa-github-generator/.github/workflows/builder_go_slsa3.yml@v2.0.0 -> slsa-framework/slsa-github-generator/.github/actions/secure-builder-checkout@v2.0.0. Pinning the direct reference does not pin this action."
+     },
+     "locations": [
+      {
+       "physicalLocation": {
+        "artifactLocation": {
+         "uri": ".github/workflows/release.yml"
+        },
+        "region": {
+         "startLine": 52
+        }
+       }
+      }
+     ]
+    },
+    {
+     "ruleId": "APN002",
+     "level": "error",
+     "message": {
+      "text": "`slsa-framework/slsa-github-generator/.github/actions/secure-builder-checkout@v2.0.0` (tag) is pulled in transitively via .github/workflows/release.yml -> slsa-framework/slsa-github-generator/.github/workflows/builder_go_slsa3.yml@v2.0.0 -> slsa-framework/slsa-github-generator/.github/actions/secure-builder-checkout@v2.0.0. Pinning the direct reference does not pin this action."
+     },
+     "locations": [
+      {
+       "physicalLocation": {
+        "artifactLocation": {
+         "uri": ".github/workflows/release.yml"
+        },
+        "region": {
+         "startLine": 52
+        }
+       }
+      }
+     ]
+    },
+    {
+     "ruleId": "APN002",
+     "level": "error",
+     "message": {
+      "text": "`slsa-framework/slsa-github-generator/.github/actions/secure-builder-checkout@v2.0.0` (tag) is pulled in transitively via .github/workflows/release.yml -> slsa-framework/slsa-github-generator/.github/workflows/builder_go_slsa3.yml@v2.0.0 -> slsa-framework/slsa-github-generator/.github/actions/secure-builder-checkout@v2.0.0. Pinning the direct reference does not pin this action."
+     },
+     "locations": [
+      {
+       "physicalLocation": {
+        "artifactLocation": {
+         "uri": ".github/workflows/release.yml"
+        },
+        "region": {
+         "startLine": 52
+        }
+       }
+      }
+     ]
+    },
+    {
+     "ruleId": "APN002",
+     "level": "error",
+     "message": {
+      "text": "`slsa-framework/slsa-github-generator/.github/actions/secure-builder-checkout@v2.0.0` (tag) is pulled in transitively via .github/workflows/release.yml -> slsa-framework/slsa-github-generator/.github/workflows/builder_go_slsa3.yml@v2.0.0 -> slsa-framework/slsa-github-generator/.github/actions/secure-builder-checkout@v2.0.0. Pinning the direct reference does not pin this action."
+     },
+     "locations": [
+      {
+       "physicalLocation": {
+        "artifactLocation": {
+         "uri": ".github/workflows/release.yml"
+        },
+        "region": {
+         "startLine": 52
+        }
+       }
+      }
+     ]
+    },
+    {
+     "ruleId": "APN002",
+     "level": "error",
+     "message": {
+      "text": "`docker://gcr.io/openssf/scorecard-action:v2.4.0` (docker-tag) is pulled in transitively via .github/workflows/scorecards.yml -> ossf/scorecard-action@62b2cac7ed8198b15735ed49ab1e5cf35480ba46 -> docker://gcr.io/openssf/scorecard-action:v2.4.0. Pinning the direct reference does not pin this action."
+     },
+     "locations": [
+      {
+       "physicalLocation": {
+        "artifactLocation": {
+         "uri": ".github/workflows/scorecards.yml"
+        },
+        "region": {
+         "startLine": 33
+        }
+       }
+      }
+     ]
+    },
+    {
+     "ruleId": "APN002",
+     "level": "error",
+     "message": {
+      "text": "`slsa-framework/slsa-github-generator/.github/actions/secure-builder-checkout@v2.0.0` (tag) is pulled in transitively via .github/workflows/release.yml -> slsa-framework/slsa-github-generator/.github/workflows/builder_go_slsa3.yml@v2.0.0 -> slsa-framework/slsa-github-generator/.github/actions/generate-builder@v2.0.0 -> slsa-framework/slsa-github-generator/.github/actions/secure-builder-checkout@v2.0.0. Pinning the direct reference does not pin this action."
+     },
+     "locations": [
+      {
+       "physicalLocation": {
+        "artifactLocation": {
+         "uri": ".github/workflows/release.yml"
+        },
+        "region": {
+         "startLine": 52
+        }
+       }
+      }
+     ]
+    }
+   ]
+  }
+ ]
+}
