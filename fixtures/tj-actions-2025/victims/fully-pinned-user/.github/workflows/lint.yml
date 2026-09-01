@@ -1,0 +1,13 @@
+# Every direct reference is a full SHA, so a direct SHA-pinning policy passes.
+# The pinned composite action still pulls reviewdog/action-setup@v1 and
+# tj-actions/changed-files@v45 by tag.
+name: lint
+on: [pull_request]
+jobs:
+  eslint:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@11bd71901bbe5b1630ceea73d27597364c9af683 # v4.2.2
+      - uses: tj-actions/eslint-changed-files@74f98653675512158746d3136cd2d9326fbfb6e1 # v25.3.0
+        with:
+          config_path: .eslintrc.json

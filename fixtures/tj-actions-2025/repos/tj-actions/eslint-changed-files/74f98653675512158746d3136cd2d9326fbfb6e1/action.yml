@@ -1,0 +1,130 @@
+name: ESLint changed files
+description: Run ESLint on all changed files
+author: jackton1
+inputs:
+  token:
+    description: "[GITHUB\_TOKEN](https://docs.github.com/en/free-pro-team@latest/actions/reference/authentication-in-a-workflow#using-the-github_token-in-a-workflow) or a repo scoped [Personal Access Token](https://docs.github.com/en/free-pro-team@latest/github/authenticating-to-github/creating-a-personal-access-token)"
+    required: true
+    default: ${{ github.token }}
+  all_files:
+    description: "Run [ESlint](https://eslint.org) on all matching files."
+    required: false
+    default: 'false'
+  config_path:
+    description: "[ESLint](https://eslint.org/) [configuration file](https://eslint.org/docs/user-guide/configuring/). Optionally omit this input for Mono repositories."
+    required: false
+    default: ''
+  ignore_patterns:
+    description: "[ESLint](https://eslint.org/docs/latest/use/configure/ignore) [configuration file](https://eslint.org/docs/latest/use/configure/ignore#ignoring-files) ignores key. Optionally ignoring files in the `ignores` key from being passed to ESLint, this input would be ignored when `all_files` is set to `true`."
+    required: false
+    default: ''
+  file_extensions:
+    description: "List of file extensions to watch for changes and run [ESlint](https://eslint.org/) against."
+    required: false
+    default: |
+      **/*.{ts,tsx,js,jsx}
+  extra_args:
+    description: "Extra arguments passed to [ESlint](https://eslint.org/docs/user-guide/command-line-interface)"
+    required: false
+    default: ''
+  skip_annotations:
+    description: "Skip running reviewdog i.e don't add any annotations."
+    required: false
+    default: 'false'
+  level:
+    description: "Report level for reviewdog (info,warning,error)"
+    required: false
+    default: 'error'
+  reporter:
+    description: |
+      [Reporter](https://github.com/reviewdog/reviewdog#reporters) of reviewdog command
+      (github-check, github-pr-review).
+      github-pr-review can use Markdown and add a link to the rule page in reviewdog reports.
+    required: false
+    default: 'github-pr-review'
+  filter_mode:
+    description: |
+      [Filter mode](https://github.com/reviewdog/reviewdog#filter-mode) for the reviewdog command
+      (added, diff_context, file, nofilter).
+    required: false
+    default: 'added'
+  fail_on_error:
+    description: "Exit code for reviewdog when errors are found."
+    required: false
+    default: 'true'
+  path:
+   description: "Relative path under GITHUB_WORKSPACE to the repository"
+   required: false
+   default: '.'
+  skip_initial_fetch:
+    description: |
+      Skip initially fetching additional history to improve performance for shallow repositories.
+      NOTE: This could lead to errors with missing history. It's intended to be used when you've fetched all necessary history to perform the diff.
+    required: false
+    default: false
+  use_rest_api:
+    description: |
+      Force the use of Github's REST API even when a local copy of the repository exists
+    required: false
+    default: false
+  escape_paths:
+    description: "Escaped changed file paths passed to ESLint. NOTE: This defaults to `true` to prevent command injection."
+    required: false
+    default: true
+  ignore_path:
+    description: |
+      When using [ESlint](https://eslint.org/) `v8.x` use this option to pass the .eslintignore file
+      to silence ignore files warning [ignore file](https://eslint.org/docs/latest/use/configure/ignore-deprecated#using-an-alternate-file)
+    required: false
+    default: ''
+
+runs:
+  using: 'composite'
+  steps:
+    - uses: reviewdog/action-setup@v1
+      if: inputs.skip_annotations == 'false'
+      with:
+        reviewdog_version: v0.20.0
+    - name: Get changed files
+      id: changed-files
+      uses: tj-actions/changed-files@v45
+      if: inputs.all_files == 'false'
+      with:
+        path: ${{ inputs.path }}
+        files: ${{ inputs.file_extensions }}
+        files_ignore: ${{ inputs.ignore_patterns }}
+        files_ignore_from_source_file: ${{ inputs.ignore_path }}
+        diff_relative: true
+        skip_initial_fetch: ${{ inputs.skip_initial_fetch }}
+        use_rest_api: ${{ inputs.use_rest_api }}
+        safe_output: ${{ inputs.escape_paths }}
+    - name: Run eslint on changed files
+      run: |
+        # Run eslint on changed files
+        bash $GITHUB_ACTION_PATH/entrypoint.sh
+      id: eslint-changed-files
+      shell: bash
+      env:
+        GITHUB_SERVER_URL: ${{ github.server_url }}
+        GITHUB_REPOSITORY: ${{ github.repository }}
+        GITHUB_BASE_REF: ${{ github.base_ref }}
+        GITHUB_HEAD_REF: ${{ github.head_ref }}
+        GITHUB_SHA: ${{ github.sha }}
+        # INPUT_<VARIABLE_NAME> is not available in Composite run steps
+        # https://github.community/t/input-variable-name-is-not-available-in-composite-run-steps/127611
+        INPUT_TOKEN: ${{ inputs.token }}
+        REVIEWDOG_GITHUB_API_TOKEN: ${{ inputs.token }}
+        INPUT_PATH: ${{ inputs.path }}
+        INPUT_LEVEL: ${{ inputs.level }}
+        INPUT_ALL_FILES: ${{ inputs.all_files }}
+        INPUT_CONFIG_PATH: ${{ inputs.config_path }}
+        INPUT_CHANGED_FILES: ${{ steps.changed-files.outputs.all_changed_files }}
+        INPUT_EXTRA_ARGS: ${{ inputs.extra_args }}
+        INPUT_FILTER_MODE: ${{ inputs.filter_mode }}
+        INPUT_FAIL_ON_ERROR: ${{ inputs.fail_on_error }}
+        INPUT_REPORTER: ${{ inputs.reporter }}
+        INPUT_SKIP_ANNOTATIONS: ${{ inputs.token && inputs.skip_annotations || 'true' }}
+
+branding:
+  icon: check-square
+  color: white

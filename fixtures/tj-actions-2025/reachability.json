@@ -1,0 +1,11 @@
+{
+ "note": "Live reachability of the malicious commits from upstream branches/tags.",
+ "repos": {
+  "tj-actions/changed-files": {
+   "0e58ed8671d6b60d0890c21b07f8835ace038e67": false
+  },
+  "reviewdog/action-setup": {
+   "f0d342d24037bb11d26b9bd8496e0808ba32e9ec": false
+  }
+ }
+}

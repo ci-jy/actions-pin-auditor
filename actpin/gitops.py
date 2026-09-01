@@ -4,6 +4,7 @@ from __future__ import annotations
 
 import os
 import subprocess
+import threading
 from pathlib import Path
 
 GIT_ENV = {**os.environ, "GIT_TERMINAL_PROMPT": "0", "GIT_ASKPASS": "true"}
@@ -102,6 +103,8 @@ class ReachabilityChecker:
         self.workdir.mkdir(parents=True, exist_ok=True)
         self._refs: dict[str, dict[str, str]] = {}
         self._clones: dict[str, Path] = {}
+        self._locks: dict[str, threading.Lock] = {}
+        self._guard = threading.Lock()
 
     def refs(self, slug: str) -> dict[str, str]:
         if slug not in self._refs:
@@ -120,6 +123,13 @@ class ReachabilityChecker:
         return self._clones[slug]
 
     def is_reachable(self, slug: str, sha: str) -> bool:
+        slug = slug.lower()
+        with self._guard:
+            lock = self._locks.setdefault(slug, threading.Lock())
+        with lock:
+            return self._is_reachable(slug, sha)
+
+    def _is_reachable(self, slug: str, sha: str) -> bool:
         if sha in set(self.refs(slug).values()):
             return True
         d = self._clone(slug)

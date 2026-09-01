@@ -1,0 +1,22 @@
+{
+  "name": "tj-actions/changed-files and reviewdog/action-setup compromise, March 2025",
+  "sources": [
+    "https://www.cisa.gov/news-events/alerts/2025/03/18/supply-chain-compromise-third-party-github-action-cve-2025-30066",
+    "https://www.wiz.io/blog/new-github-action-supply-chain-attack-reviewdog-action-setup",
+    "https://www.stepsecurity.io/blog/harden-runner-detection-tj-actions-changed-files-action-is-compromised"
+  ],
+  "compromised": [
+    {"repo": "reviewdog/action-setup", "cve": "CVE-2025-30154", "tag": "v1",
+     "malicious_sha": "f0d342d24037bb11d26b9bd8496e0808ba32e9ec"},
+    {"repo": "tj-actions/changed-files", "cve": "CVE-2025-30066", "tag": "v45",
+     "malicious_sha": "0e58ed8671d6b60d0890c21b07f8835ace038e67"}
+  ],
+  "expected_exposures": [
+    {"victim": "direct-tag-user", "repo": "tj-actions/changed-files", "min_depth": 1},
+    {"victim": "fully-pinned-user", "repo": "reviewdog/action-setup", "min_depth": 2,
+     "direct_policy_pass": true},
+    {"victim": "fully-pinned-user", "repo": "tj-actions/changed-files", "min_depth": 2,
+     "direct_policy_pass": true},
+    {"victim": "tj-actions-changed-files", "repo": "reviewdog/action-setup", "min_depth": 2}
+  ]
+}

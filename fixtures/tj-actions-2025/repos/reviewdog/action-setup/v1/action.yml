@@ -1,0 +1,27 @@
+name: "Setup reviewdog"
+description: "🐶 This action sets up reviewdog"
+inputs:
+  reviewdog_version:
+    description: "reviewdog version. [latest,nightly,vX.Y.Z]"
+    default: "latest"
+runs:
+  using: "composite"
+  steps:
+    - name: install reviewdog
+      run: |
+        set -eu
+        "$GITHUB_ACTION_PATH/install.sh"
+      shell: sh
+      env:
+        REVIEWDOG_VERSION: ${{ inputs.reviewdog_version }}
+        REVIEWDOG_TEMPDIR: ${{ runner.temp }}
+    - name: check reviewdog is successfully installed
+      run: |
+        set -eu
+        "$GITHUB_ACTION_PATH/check-installed.sh"
+      shell: sh
+
+# Ref: https://haya14busa.github.io/github-action-brandings/
+branding:
+  icon: "terminal"
+  color: "gray-dark"
