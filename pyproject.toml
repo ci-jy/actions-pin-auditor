@@ -1,0 +1,25 @@
+[build-system]
+requires = ["setuptools>=61"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "actpin"
+version = "0.1.0"
+description = "Transitive SHA-pinning and tag-mutation auditor for GitHub Actions"
+readme = "README.md"
+requires-python = ">=3.10"
+license = { text = "MIT" }
+dependencies = ["PyYAML>=6"]
+
+[project.optional-dependencies]
+test = ["pytest>=7", "hypothesis>=6"]
+report = ["matplotlib>=3.5"]
+
+[project.scripts]
+actpin = "actpin.cli:main"
+
+[tool.setuptools]
+packages = ["actpin"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]

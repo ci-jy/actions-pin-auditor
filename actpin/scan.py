@@ -73,11 +73,17 @@ def scan_repo(slug: str, fetcher: Fetcher, workdir: str | os.PathLike,
     rec: dict = {"repo": slug}
     d = Path(tempfile.mkdtemp(prefix="clone-", dir=workdir))
     try:
-        files = gitops.fetch_repo_files(slug, d / "r")
-        rec["commit"] = gitops.head_sha(d / "r")
-    except gitops.GitError as e:
-        rec.update(status="error", error=str(e))
-        return rec
+        for attempt in range(2):  # one retry for transient network errors
+            shutil.rmtree(d / "r", ignore_errors=True)
+            try:
+                files = gitops.fetch_repo_files(slug, d / "r")
+                rec["commit"] = gitops.head_sha(d / "r")
+                break
+            except gitops.GitError as e:
+                if attempt:
+                    rec.update(status="error", error=str(e))
+                    return rec
+                time.sleep(3)
     finally:
         shutil.rmtree(d, ignore_errors=True)
     local = LocalRepo(files)
@@ -155,6 +161,10 @@ def build_summary(records: list[dict]) -> dict:
         "direct_policy_fail": len(ok) - len(passing),
         "direct_pass_but_transitive_unpinned": len(exposed),
         "direct_pass_but_transitive_unpinned_repos": [r["repo"] for r in exposed],
+        "direct_pass_but_transitive_unpinned_action_ref": sum(
+            1 for r in exposed if any(f["transitive"] and f["state"] != "docker-tag" for f in r["findings"])),
+        "direct_pass_but_transitive_mutable_image": sum(
+            1 for r in exposed if any(f["transitive"] and f["state"] == "docker-tag" for f in r["findings"])),
         "github_policy_flags_in_those_repos": sum(r["direct_unpinned"] for r in exposed),
         "repos_with_any_transitive_unpinned": sum(1 for r in ok if r["transitive_unpinned"] > 0),
         "total_direct_refs": sum(r["direct_refs"] for r in ok),
