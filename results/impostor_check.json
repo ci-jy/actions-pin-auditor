@@ -1,0 +1,20 @@
+{
+ "command": "python3 -m actpin scan --repos data/repos.txt --limit 100 --check-impostors --out <dir>",
+ "sha_pin_checks_deduplicated_per_repo": 2022,
+ "unreachable_pins": [
+  {
+   "repo": "pnpm/action-setup",
+   "sha": "c5ba7f7862a0f64c1b1a05fbac13e0b8e86ba08c",
+   "uses": "pnpm/action-setup@c5ba7f7862a0f64c1b1a05fbac13e0b8e86ba08c",
+   "in": "grafana/grafana-github-actions/.github/workflows/verify-i18n.yml@main",
+   "found_in_repo": "grafana/grafana"
+  },
+  {
+   "repo": "dtolnay/rust-toolchain",
+   "sha": "29eef336d9b2848a0b548edc03f92a220660cdb8",
+   "uses": "dtolnay/rust-toolchain@29eef336d9b2848a0b548edc03f92a220660cdb8",
+   "in": "rstackjs/rspack-toolchain/.github/workflows/build.yml@c0b7f47d0d657adbc4fddb3b3f2b607019004491",
+   "found_in_repo": "vercel/next.js"
+  }
+ ]
+}
