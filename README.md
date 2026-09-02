@@ -137,3 +137,5 @@ Regenerate the figure, browser report and notes after a scan with `python3 scrip
 - Dockerfile-based actions are treated as content-pinned by the action SHA, but their `FROM` base images are not inspected. Expressions in `uses:` and JavaScript actions that download code at runtime are out of reach of static analysis.
 - The replay fixture keeps the attack's tag state and commit IDs but not the malicious code. The pre-attack value of `reviewdog/action-setup@v1` is taken as v1.3.0, the latest v1.x at the time.
 - Next steps: resolve tags to SHAs during the walk so findings can say whether a tag has moved since a baseline, inspect Dockerfile base images, and emit a pin-fix patch for every flagged upstream action rather than the top 12.
+
+Project period: 2026-08-31 to 2026-09-02.
