@@ -65,16 +65,20 @@
       "repos": 6
     },
     {
-      "link": "slsa-framework/slsa-github-generator/.github/workflows/generator_generic_slsa3.yml -> slsa-framework/slsa-github-generator/.github/actions/secure-download-artifact@v2.1.0",
-      "repos": 6
-    },
-    {
       "link": "slsa-framework/slsa-github-generator/.github/workflows/generator_generic_slsa3.yml -> slsa-framework/slsa-github-generator/.github/actions/generate-builder@v2.1.0",
       "repos": 6
     },
     {
       "link": "slsa-framework/slsa-github-generator/.github/workflows/generator_generic_slsa3.yml -> slsa-framework/slsa-github-generator/.github/actions/secure-builder-checkout@v2.1.0",
       "repos": 6
+    },
+    {
+      "link": "slsa-framework/slsa-github-generator/.github/workflows/generator_generic_slsa3.yml -> slsa-framework/slsa-github-generator/.github/actions/secure-download-artifact@v2.1.0",
+      "repos": 6
+    },
+    {
+      "link": "ossf/scorecard-action -> docker://ghcr.io/ossf/scorecard-action:v2.4.3",
+      "repos": 4
     },
     {
       "link": "slsa-framework/slsa-github-generator/.github/workflows/generator_container_slsa3.yml -> slsa-framework/slsa-github-generator/.github/actions/detect-workflow-js@v2.1.0",
@@ -85,27 +89,23 @@
       "repos": 4
     },
     {
-      "link": "ossf/scorecard-action -> docker://ghcr.io/ossf/scorecard-action:v2.4.3",
-      "repos": 4
-    },
-    {
       "link": "christian-korneck/update-container-description-action -> docker://docker.io/chko/docker-pushrm:1",
       "repos": 3
+    },
+    {
+      "link": "google/osv-scanner-action/.github/workflows/osv-scanner-reusable-pr.yml -> google/osv-scanner-action/osv-reporter-action@nightly",
+      "repos": 2
     },
     {
       "link": "google/osv-scanner-action/.github/workflows/osv-scanner-reusable-pr.yml -> google/osv-scanner-action/osv-scanner-action@nightly",
       "repos": 2
     },
     {
-      "link": "google/osv-scanner-action/osv-scanner-action -> docker://ghcr.io/google/osv-scanner-action:nightly",
-      "repos": 2
-    },
-    {
-      "link": "google/osv-scanner-action/osv-reporter-action -> docker://ghcr.io/google/osv-scanner-action:nightly",
-      "repos": 2
-    },
-    {
       "link": "google/osv-scanner-action/.github/workflows/osv-scanner-reusable.yml -> google/osv-scanner-action/osv-reporter-action@nightly",
+      "repos": 2
+    },
+    {
+      "link": "google/osv-scanner-action/.github/workflows/osv-scanner-reusable.yml -> google/osv-scanner-action/osv-scanner-action@nightly",
       "repos": 2
     }
   ]

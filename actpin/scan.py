@@ -174,5 +174,6 @@ def build_summary(records: list[dict]) -> dict:
         "max_depth": max((r["max_depth"] for r in ok), default=0),
         "impostor_commits": sum(len(r.get("impostors", [])) for r in ok),
         "impostor_checks": sum(r.get("impostor_checks", 0) for r in ok),
-        "top_transitive_unpinned": [{"link": k, "repos": v} for k, v in culprits.most_common(15)],
+        "top_transitive_unpinned": [{"link": k, "repos": v} for k, v in
+                                    sorted(culprits.items(), key=lambda kv: (-kv[1], kv[0]))[:15]],
     }
