@@ -6,7 +6,7 @@ A Python CLI for security and DevSecOps teams that follows every GitHub Actions 
 
 - **Flagged unpinned transitive actions or images in 28 of 56 repos** that pass a direct SHA-pin policy (which flags 0 in them), across a 100-repo public scan.
 - **Caught the 2025 tj-actions/reviewdog attack in a recorded replay**: all 360 hijacked tags, both impostor commits, and the depth-2 path into a fully SHA-pinned victim.
-- **Matched a brute-force reference resolver on 400 generated action graphs** with cycles, self-loops, missing actions and mixed ref types (Hypothesis property tests).
+- **Proved the dependency-chain finder exact on all 400 random action graphs** by matching a slow exhaustive checker, including loops, missing actions and mixed version references (Hypothesis and pytest).
 
 ![28 of 56 directly-pinned repos still run unpinned code transitively](docs/scan.png)
 
