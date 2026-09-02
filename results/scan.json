@@ -131,7 +131,7 @@
     "root_line": 77
    }
   ],
-  "seconds": 0.98
+  "seconds": 0.94
  },
  {
   "repo": "ossf/scorecard-action",
@@ -172,7 +172,7 @@
     "root_line": 25
    }
   ],
-  "seconds": 0.77
+  "seconds": 0.78
  },
  {
   "repo": "ossf/osv-schema",
@@ -305,7 +305,7 @@
     "root_line": 37
    }
   ],
-  "seconds": 0.8
+  "seconds": 0.87
  },
  {
   "repo": "google/osv-scanner",
@@ -583,7 +583,7 @@
     "root_line": 25
    }
   ],
-  "seconds": 1.06
+  "seconds": 1.08
  },
  {
   "repo": "sigstore/cosign",
@@ -684,7 +684,7 @@
     "root_line": 48
    }
   ],
-  "seconds": 1.29
+  "seconds": 1.24
  },
  {
   "repo": "sigstore/rekor",
@@ -738,7 +738,7 @@
     "root_line": 24
    }
   ],
-  "seconds": 1.18
+  "seconds": 1.2
  },
  {
   "repo": "sigstore/fulcio",
@@ -793,7 +793,7 @@
     "root_line": 31
    }
   ],
-  "seconds": 1.16
+  "seconds": 1.01
  },
  {
   "repo": "sigstore/sigstore",
@@ -859,7 +859,7 @@
     "root_line": 25
    }
   ],
-  "seconds": 0.95
+  "seconds": 0.96
  },
  {
   "repo": "sigstore/gitsign",
@@ -874,7 +874,7 @@
   "max_depth": 2,
   "transitive_unpinned": 0,
   "findings": [],
-  "seconds": 0.63
+  "seconds": 0.62
  },
  {
   "repo": "sigstore/sigstore-python",
@@ -903,7 +903,7 @@
     "root_line": 32
    }
   ],
-  "seconds": 0.94
+  "seconds": 0.96
  },
  {
   "repo": "step-security/harden-runner",
@@ -1168,7 +1168,7 @@
     "root_line": 45
    }
   ],
-  "seconds": 0.95
+  "seconds": 0.7
  },
  {
   "repo": "slsa-framework/slsa-github-generator",
@@ -2270,7 +2270,7 @@
     "root_line": 47
    }
   ],
-  "seconds": 1.55
+  "seconds": 1.56
  },
  {
   "repo": "slsa-framework/slsa-verifier",
@@ -2416,7 +2416,7 @@
     "root_line": 52
    }
   ],
-  "seconds": 0.74
+  "seconds": 0.79
  },
  {
   "repo": "in-toto/in-toto",
@@ -2431,7 +2431,7 @@
   "max_depth": 2,
   "transitive_unpinned": 0,
   "findings": [],
-  "seconds": 0.65
+  "seconds": 0.68
  },
  {
   "repo": "guacsec/guac",
@@ -2616,7 +2616,7 @@
     "root_line": 190
    }
   ],
-  "seconds": 0.93
+  "seconds": 0.95
  },
  {
   "repo": "chainguard-dev/apko",
@@ -2631,7 +2631,7 @@
   "max_depth": 2,
   "transitive_unpinned": 0,
   "findings": [],
-  "seconds": 0.72
+  "seconds": 0.69
  },
  {
   "repo": "chainguard-dev/melange",
@@ -2646,7 +2646,7 @@
   "max_depth": 2,
   "transitive_unpinned": 0,
   "findings": [],
-  "seconds": 0.98
+  "seconds": 0.76
  },
  {
   "repo": "anchore/syft",
@@ -2661,7 +2661,7 @@
   "max_depth": 2,
   "transitive_unpinned": 0,
   "findings": [],
-  "seconds": 1.27
+  "seconds": 1.13
  },
  {
   "repo": "anchore/grype",
@@ -2690,7 +2690,7 @@
     "root_line": 34
    }
   ],
-  "seconds": 1.18
+  "seconds": 1.12
  },
  {
   "repo": "aquasecurity/trivy",
@@ -2705,7 +2705,7 @@
   "max_depth": 2,
   "transitive_unpinned": 0,
   "findings": [],
-  "seconds": 1.17
+  "seconds": 1.16
  },
  {
   "repo": "goreleaser/goreleaser",
@@ -2747,7 +2747,7 @@
     "root_line": 23
    }
   ],
-  "seconds": 1.2
+  "seconds": 1.17
  },
  {
   "repo": "prometheus/prometheus",
@@ -2825,7 +2825,7 @@
     "root_line": 29
    }
   ],
-  "seconds": 1.18
+  "seconds": 1.24
  },
  {
   "repo": "prometheus/alertmanager",
@@ -2854,7 +2854,7 @@
     "root_line": 30
    }
   ],
-  "seconds": 0.73
+  "seconds": 0.75
  },
  {
   "repo": "prometheus/node_exporter",
@@ -2883,7 +2883,7 @@
     "root_line": 30
    }
   ],
-  "seconds": 0.72
+  "seconds": 0.63
  },
  {
   "repo": "etcd-io/etcd",
@@ -2912,7 +2912,7 @@
     "root_line": 31
    }
   ],
-  "seconds": 0.81
+  "seconds": 0.75
  },
  {
   "repo": "containerd/containerd",
@@ -2965,7 +2965,7 @@
     "root_line": 32
    }
   ],
-  "seconds": 2.34
+  "seconds": 1.43
  },
  {
   "repo": "docker/buildx",
@@ -2993,7 +2993,7 @@
     "root_line": 62
    }
   ],
-  "seconds": 1.03
+  "seconds": 0.99
  },
  {
   "repo": "docker/compose",
@@ -3034,7 +3034,7 @@
     "root_line": 42
    }
   ],
-  "seconds": 1.23
+  "seconds": 1.14
  },
  {
   "repo": "moby/moby",
@@ -3049,7 +3049,7 @@
   "max_depth": 2,
   "transitive_unpinned": 0,
   "findings": [],
-  "seconds": 1.37
+  "seconds": 1.4
  },
  {
   "repo": "open-telemetry/opentelemetry-collector",
@@ -3079,7 +3079,7 @@
     "root_line": 23
    }
   ],
-  "seconds": 1.69
+  "seconds": 1.35
  },
  {
   "repo": "open-telemetry/opentelemetry-go",
@@ -3109,7 +3109,7 @@
     "root_line": 22
    }
   ],
-  "seconds": 1.26
+  "seconds": 1.25
  },
  {
   "repo": "open-telemetry/opentelemetry-python",
@@ -3151,7 +3151,7 @@
     "root_line": 19
    }
   ],
-  "seconds": 1.76
+  "seconds": 1.5
  },
  {
   "repo": "open-telemetry/opentelemetry-js",
@@ -3181,7 +3181,7 @@
     "root_line": 19
    }
   ],
-  "seconds": 1.53
+  "seconds": 1.34
  },
  {
   "repo": "envoyproxy/envoy",
@@ -3222,7 +3222,7 @@
     "root_line": 30
    }
   ],
-  "seconds": 1.54
+  "seconds": 1.5
  },
  {
   "repo": "istio/istio",
@@ -3410,7 +3410,7 @@
     "root_line": 210
    }
   ],
-  "seconds": 1.34
+  "seconds": 1.33
  },
  {
   "repo": "argoproj/argo-workflows",
@@ -3452,7 +3452,7 @@
     "root_line": 61
    }
   ],
-  "seconds": 1.34
+  "seconds": 1.38
  },
  {
   "repo": "fluxcd/flux2",
@@ -3671,7 +3671,7 @@
     "root_line": 172
    }
   ],
-  "seconds": 0.96
+  "seconds": 0.85
  },
  {
   "repo": "cilium/cilium",
@@ -3785,7 +3785,7 @@
     "root_line": 190
    }
   ],
-  "seconds": 2.31
+  "seconds": 2.72
  },
  {
   "repo": "kyverno/kyverno",
@@ -4102,7 +4102,7 @@
     "root_line": 29
    }
   ],
-  "seconds": 1.35
+  "seconds": 1.55
  },
  {
   "repo": "falcosecurity/falco",
@@ -4193,7 +4193,7 @@
     "root_line": 46
    }
   ],
-  "seconds": 1.11
+  "seconds": 0.79
  },
  {
   "repo": "tektoncd/pipeline",
@@ -4222,7 +4222,7 @@
     "root_line": 42
    }
   ],
-  "seconds": 1.88
+  "seconds": 1.48
  },
  {
   "repo": "helm/helm",
@@ -4251,7 +4251,7 @@
     "root_line": 36
    }
   ],
-  "seconds": 1.61
+  "seconds": 0.83
  },
  {
   "repo": "kubernetes/kubernetes",
@@ -4271,7 +4271,7 @@
   "max_depth": 2,
   "transitive_unpinned": 0,
   "findings": [],
-  "seconds": 0.99
+  "seconds": 0.81
  },
  {
   "repo": "kubernetes-sigs/cluster-api",
@@ -4286,7 +4286,7 @@
   "max_depth": 1,
   "transitive_unpinned": 0,
   "findings": [],
-  "seconds": 1.11
+  "seconds": 1.32
  },
  {
   "repo": "cert-manager/cert-manager",
@@ -4315,7 +4315,7 @@
     "root_line": 31
    }
   ],
-  "seconds": 0.74
+  "seconds": 0.91
  },
  {
   "repo": "external-secrets/external-secrets",
@@ -4344,7 +4344,7 @@
     "root_line": 32
    }
   ],
-  "seconds": 1.87
+  "seconds": 1.28
  },
  {
   "repo": "open-policy-agent/opa",
@@ -4373,7 +4373,7 @@
     "root_line": 36
    }
   ],
-  "seconds": 1.74
+  "seconds": 1.31
  },
  {
   "repo": "open-policy-agent/gatekeeper",
@@ -4402,7 +4402,7 @@
     "root_line": 44
    }
   ],
-  "seconds": 1.48
+  "seconds": 1.22
  },
  {
   "repo": "crossplane/crossplane",
@@ -4442,7 +4442,7 @@
     "root_line": 349
    }
   ],
-  "seconds": 0.95
+  "seconds": 0.86
  },
  {
   "repo": "linkerd/linkerd2",
@@ -4555,7 +4555,7 @@
     "root_line": 206
    }
   ],
-  "seconds": 1.79
+  "seconds": 1.32
  },
  {
   "repo": "jaegertracing/jaeger",
@@ -4690,7 +4690,7 @@
     "root_line": 198
    }
   ],
-  "seconds": 1.46
+  "seconds": 0.99
  },
  {
   "repo": "thanos-io/thanos",
@@ -4802,7 +4802,7 @@
     "root_line": 246
    }
   ],
-  "seconds": 1.24
+  "seconds": 1.14
  },
  {
   "repo": "grafana/grafana",
@@ -7951,7 +7951,7 @@
     "root_line": 159
    }
   ],
-  "seconds": 2.55
+  "seconds": 1.97
  },
  {
   "repo": "grafana/loki",
@@ -8005,7 +8005,7 @@
     "root_line": 17
    }
   ],
-  "seconds": 1.63
+  "seconds": 2.06
  },
  {
   "repo": "grafana/k6",
@@ -8047,7 +8047,7 @@
     "root_line": 46
    }
   ],
-  "seconds": 0.87
+  "seconds": 0.88
  },
  {
   "repo": "hashicorp/terraform",
@@ -8062,7 +8062,7 @@
   "max_depth": 2,
   "transitive_unpinned": 0,
   "findings": [],
-  "seconds": 1.03
+  "seconds": 1.38
  },
  {
   "repo": "hashicorp/vault",
@@ -8092,7 +8092,7 @@
     "root_line": 25
    }
   ],
-  "seconds": 2.21
+  "seconds": 1.91
  },
  {
   "repo": "opentofu/opentofu",
@@ -8133,7 +8133,7 @@
     "root_line": 149
    }
   ],
-  "seconds": 1.17
+  "seconds": 1.4
  },
  {
   "repo": "pulumi/pulumi",
@@ -8630,7 +8630,7 @@
     "root_line": 55
    }
   ],
-  "seconds": 1.86
+  "seconds": 1.61
  },
  {
   "repo": "caddyserver/caddy",
@@ -8685,7 +8685,7 @@
     "root_line": 50
    }
   ],
-  "seconds": 1.31
+  "seconds": 1.05
  },
  {
   "repo": "traefik/traefik",
@@ -8700,7 +8700,7 @@
   "max_depth": 1,
   "transitive_unpinned": 0,
   "findings": [],
-  "seconds": 1.29
+  "seconds": 1.19
  },
  {
   "repo": "golangci/golangci-lint",
@@ -8715,7 +8715,7 @@
   "max_depth": 2,
   "transitive_unpinned": 0,
   "findings": [],
-  "seconds": 1.2
+  "seconds": 1.08
  },
  {
   "repo": "nodejs/node",
@@ -8757,7 +8757,7 @@
     "root_line": 49
    }
   ],
-  "seconds": 1.58
+  "seconds": 1.49
  },
  {
   "repo": "nodejs/undici",
@@ -8798,7 +8798,7 @@
     "root_line": 37
    }
   ],
-  "seconds": 0.79
+  "seconds": 0.84
  },
  {
   "repo": "npm/cli",
@@ -10436,7 +10436,7 @@
     "root_line": 45
    }
   ],
-  "seconds": 1.39
+  "seconds": 1.3
  },
  {
   "repo": "electron/electron",
@@ -10465,7 +10465,7 @@
     "root_line": 32
    }
   ],
-  "seconds": 1.53
+  "seconds": 1.48
  },
  {
   "repo": "angular/angular",
@@ -10480,7 +10480,7 @@
   "max_depth": 2,
   "transitive_unpinned": 0,
   "findings": [],
-  "seconds": 1.64
+  "seconds": 1.52
  },
  {
   "repo": "facebook/react",
@@ -12900,7 +12900,7 @@
     "root_line": 32
    }
   ],
-  "seconds": 1.54
+  "seconds": 1.21
  },
  {
   "repo": "vercel/next.js",
@@ -12944,7 +12944,7 @@
     "root_line": 26
    }
   ],
-  "seconds": 2.05
+  "seconds": 1.94
  },
  {
   "repo": "vuejs/core",
@@ -12959,7 +12959,7 @@
   "max_depth": 1,
   "transitive_unpinned": 0,
   "findings": [],
-  "seconds": 0.91
+  "seconds": 0.97
  },
  {
   "repo": "vitejs/vite",
@@ -12974,7 +12974,7 @@
   "max_depth": 2,
   "transitive_unpinned": 0,
   "findings": [],
-  "seconds": 1.18
+  "seconds": 1.26
  },
  {
   "repo": "sveltejs/svelte",
@@ -12989,7 +12989,7 @@
   "max_depth": 1,
   "transitive_unpinned": 0,
   "findings": [],
-  "seconds": 1.32
+  "seconds": 1.65
  },
  {
   "repo": "webpack/webpack",
@@ -13004,7 +13004,7 @@
   "max_depth": 2,
   "transitive_unpinned": 0,
   "findings": [],
-  "seconds": 1.37
+  "seconds": 1.49
  },
  {
   "repo": "babel/babel",
@@ -14448,7 +14448,7 @@
     "root_line": 51
    }
   ],
-  "seconds": 1.71
+  "seconds": 1.61
  },
  {
   "repo": "eslint/eslint",
@@ -15305,7 +15305,7 @@
     "root_line": 13
    }
   ],
-  "seconds": 1.19
+  "seconds": 1.15
  },
  {
   "repo": "prettier/prettier",
@@ -15360,7 +15360,7 @@
     "root_line": 15
    }
   ],
-  "seconds": 1.41
+  "seconds": 1.24
  },
  {
   "repo": "microsoft/playwright",
@@ -15375,7 +15375,7 @@
   "max_depth": 2,
   "transitive_unpinned": 0,
   "findings": [],
-  "seconds": 1.13
+  "seconds": 1.09
  },
  {
   "repo": "microsoft/TypeScript",
@@ -15404,7 +15404,7 @@
     "root_line": 37
    }
   ],
-  "seconds": 1.54
+  "seconds": 1.35
  },
  {
   "repo": "microsoft/vscode",
@@ -15419,7 +15419,7 @@
   "max_depth": 2,
   "transitive_unpinned": 0,
   "findings": [],
-  "seconds": 1.7
+  "seconds": 1.47
  },
  {
   "repo": "microsoft/terminal",
@@ -15434,7 +15434,7 @@
   "max_depth": 1,
   "transitive_unpinned": 0,
   "findings": [],
-  "seconds": 1.12
+  "seconds": 1.08
  },
  {
   "repo": "PowerShell/PowerShell",
@@ -15463,7 +15463,7 @@
     "root_line": 40
    }
   ],
-  "seconds": 1.37
+  "seconds": 1.31
  },
  {
   "repo": "dotnet/runtime",
@@ -15767,7 +15767,7 @@
     "root_line": 40
    }
   ],
-  "seconds": 0.78
+  "seconds": 0.71
  },
  {
   "repo": "fastify/fastify",
@@ -15874,7 +15874,7 @@
     "root_line": 18
    }
   ],
-  "seconds": 1.05
+  "seconds": 1.17
  },
  {
   "repo": "nestjs/nest",
@@ -15938,7 +15938,7 @@
     "root_line": 61
    }
   ],
-  "seconds": 1.1
+  "seconds": 1.51
  },
  {
   "repo": "denoland/deno",
@@ -15953,7 +15953,7 @@
   "max_depth": 2,
   "transitive_unpinned": 0,
   "findings": [],
-  "seconds": 1.91
+  "seconds": 1.74
  },
  {
   "repo": "oven-sh/bun",
@@ -15982,7 +15982,7 @@
     "root_line": 354
    }
   ],
-  "seconds": 1.88
+  "seconds": 1.89
  },
  {
   "repo": "astral-sh/ruff",
@@ -15997,7 +15997,7 @@
   "max_depth": 3,
   "transitive_unpinned": 0,
   "findings": [],
-  "seconds": 1.43
+  "seconds": 1.82
  },
  {
   "repo": "astral-sh/uv",
@@ -16012,7 +16012,7 @@
   "max_depth": 2,
   "transitive_unpinned": 0,
   "findings": [],
-  "seconds": 1.73
+  "seconds": 1.7
  },
  {
   "repo": "pypa/pip",
@@ -16027,7 +16027,7 @@
   "max_depth": 2,
   "transitive_unpinned": 0,
   "findings": [],
-  "seconds": 1.17
+  "seconds": 1.36
  },
  {
   "repo": "pypi/warehouse",
@@ -16042,7 +16042,7 @@
   "max_depth": 2,
   "transitive_unpinned": 0,
   "findings": [],
-  "seconds": 1.22
+  "seconds": 1.31
  },
  {
   "repo": "pallets/flask",
@@ -16057,7 +16057,7 @@
   "max_depth": 2,
   "transitive_unpinned": 0,
   "findings": [],
-  "seconds": 0.87
+  "seconds": 1.0
  },
  {
   "repo": "django/django",
@@ -16781,7 +16781,7 @@
     "root_line": 106
    }
   ],
-  "seconds": 1.47
+  "seconds": 1.15
  },
  {
   "repo": "psf/requests",
@@ -16796,7 +16796,7 @@
   "max_depth": 2,
   "transitive_unpinned": 0,
   "findings": [],
-  "seconds": 0.84
+  "seconds": 0.81
  },
  {
   "repo": "psf/black",
@@ -16825,7 +16825,7 @@
     "root_line": 43
    }
   ],
-  "seconds": 1.24
+  "seconds": 1.01
  },
  {
   "repo": "numpy/numpy",
@@ -16854,7 +16854,7 @@
     "root_line": 33
    }
   ],
-  "seconds": 1.46
+  "seconds": 1.37
  },
  {
   "repo": "scipy/scipy",
@@ -16869,6 +16869,6 @@
   "max_depth": 2,
   "transitive_unpinned": 0,
   "findings": [],
-  "seconds": 1.31
+  "seconds": 1.21
  }
 ]
